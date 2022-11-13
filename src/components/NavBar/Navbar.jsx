@@ -55,6 +55,11 @@ const Navbar = () => {
                             color: isActive ? '#FFF' : '#FFF'
                         })} to="/about-us">Bize Ulaşın</NavLink>
                     </li>
+                    <li>
+                        <NavLink style={({ isActive }) => ({
+                            color: isActive ? '#FFF' : '#FFF'
+                        })} to="/admin">ADMIN PANEL</NavLink>
+                    </li>
 
 
 
