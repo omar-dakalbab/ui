@@ -1,0 +1,16 @@
+.login-signup-comp{
+    font-weight: 400;
+    color: #67727E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 70px 0;
+    width: 100%;
+    background-color:#FAFAFA;
+    padding: 50px;
+}
+.login-signup-comp #link{
+    color: #0B91C5;
+    font-weight: 600;
+    margin: 0 5px;
+}

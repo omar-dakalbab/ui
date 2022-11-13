@@ -1,0 +1,81 @@
+.contact-us-header{
+    background-image:url('./bg.svg');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+.contact-us-header .title{
+    margin-top: 12vh;
+    margin-bottom: 7vh;
+    animation: fade-down 0.7s;
+}
+.contact-us-header .title h1{
+    font-size: 3vw;
+    font-weight: 600;
+}
+.contact-us-header .title p{
+    margin-top: 15px;
+    width: 300px;
+    color: #848484;
+}
+.contact-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.contact-section .flex-1{
+    width: 50%;
+    margin-right: 35px;
+    height: 45vh;
+}
+.contact-section .flex-1 form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section form input, form textarea{
+    max-width: 100% !important;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    width: 100%;
+    padding: 15px;
+}
+form textarea{
+    height: 200px;
+    resize: none;
+}
+.contact-section input[type=text], textarea{
+    background-color: #F9F9F9;
+    border: 1px #EFEFEF solid;
+}
+.contact-section input[type=submit]{
+    color: #FFF;
+    background: linear-gradient(94.76deg, #117AA7 9.47%, #0DA2C9 73.37%);
+}
+@media only screen and (max-width: 786px) {
+    .contact-section{
+        
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-us-header{
+        margin-top: 100px;
+    }
+    .banner{
+        flex-direction: column;
+    }
+    .banner img{
+        width: 50%;
+    }
+    .banner .flex-2 img.logo{
+        margin-left: 25%;
+    }
+}
+

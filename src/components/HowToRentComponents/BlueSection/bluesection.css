@@ -1,0 +1,18 @@
+.blue-section{
+    background-color: #21A7DB;
+    width: 100%;
+    padding: 30px 200px;
+}
+
+img.blue-section-img{
+    width: 100%;
+}
+
+.blue-section .flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: #FFF;
+}
+

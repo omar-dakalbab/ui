@@ -1,0 +1,12 @@
+.update-panels input{
+    margin: 15px;
+    color: #FFF;
+    padding: 20px;
+    background-color: rgb(177, 177, 177);
+    border-radius: 30px;
+    width: 400px;
+}
+textarea#blog_body{
+    height: 300px;
+    width: 900px;
+}

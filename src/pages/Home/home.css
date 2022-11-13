@@ -1,0 +1,26 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+    position: relative;
+    z-index: 3;
+    padding: 50px 120px;
+    border-radius: 36px 36px 0 0;
+    background-color: #FFF;
+}
+
+
+html{
+    max-width: 100vw !important;
+}
+@media only screen and (max-width: 1550px) {
+    .left-menu ul li{
+        font-size: smaller;
+        margin-left: 15px;
+    }
+    .navbar .left-menu img{
+        width: 95px;
+    } 
+ 
+} 

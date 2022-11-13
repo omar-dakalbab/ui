@@ -1,0 +1,98 @@
+.kiraya-verin-comp{
+    display: flex;
+    padding-left: 200px;
+}
+.kiraya-verin-left{
+    margin-top: 65px;
+    margin-right: 120px;
+}
+.kiraya-verin-left span:first-child{
+    color: #1E98C7;
+    font-weight: 600;
+    font-size: 23px;
+}
+input[type="date"]{
+        border: none;
+    box-sizing: border-box;
+    outline: 0;
+    padding: .75rem;
+    position: relative;
+    width: 100%;    
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+.kiraya-verin-left h1{
+    font-size: 3rem;
+    margin-bottom: 45px;
+}
+.kiraya-verin-left span#child-2{
+    color: #929292;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.kiraya-verin-radio-btn{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 35px 0;
+}
+
+
+.radio-btn label{
+    background-color: #F8F8F8;
+    border-radius: 30px;
+    padding: 10px;
+    color: #929292;
+}
+.radio-btn{
+    display: flex;
+    align-items: center;
+}
+.radio-btn input[type="radio"] {
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+}
+.select-input, input#bedel, .kisisel-bilgi input, textarea{
+    background-color: #F8F8F8;
+    border-radius: 30px;
+    width: 100%;
+    padding: 10px;
+    color: #929292;
+    margin-bottom: 10px;
+}
+.kisisel-bilgi{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+.kisisel-bilgi span{
+    margin-bottom: 15px;
+}
+.name{
+    display: flex;
+    justify-content: space-between;
+}
+.name input{
+    width: 49%;
+}
+.kisisel-bilgi #aciklama{
+    height: 150px;
+    resize: none;
+    border-radius: 20px;
+}
+.kisisel-bilgi input#btn-gonder{
+    background-color: #117AA7 !important;
+    color: #FFF;
+}

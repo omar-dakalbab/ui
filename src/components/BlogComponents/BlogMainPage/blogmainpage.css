@@ -1,0 +1,25 @@
+.blog-main-page{
+    background: #FFF;
+    height: 100%;
+}
+
+.blog-main-page-content{
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blog-main-page-content h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.3vw;
+    font-weight: 600;
+}
+.blog-main-page-content img.blog-main-bg{
+    position: absolute;
+    width: 100%;
+}

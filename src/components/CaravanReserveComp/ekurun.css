@@ -1,0 +1,129 @@
+.ek-urunler-comp{
+    padding: 1% 15%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.ek-urunler-comp button#geri{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    margin: 35px 180px;
+    position: absolute;
+    padding: 10px 20px;
+    color: #FFF;
+    font-size: 1.3rem;
+    background: linear-gradient(94.76deg, #117AA7 9.47%, #0DA2C9 73.37%);
+    border-radius: 60px;
+}
+.ek-urunler-comp img{
+    margin-top: 20px;
+}
+.ek-urunler-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBFBFB;
+    margin-top: 40px;
+    padding: 75px;
+}
+.ek-urunler-content h1{
+    margin-bottom: 35px;
+}
+.urun-card{
+    display: flex;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.06);
+    border-radius: 24px;
+    max-width: 490px;
+    margin: 15px;
+}
+.urun-card img{
+    margin: 10px;
+}
+span#urun-desc{
+    font-weight: 500;
+    font-size: 13px;
+}
+span#title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+}
+span#urun-price{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1E98C7;
+}
+.urun-detay{
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 30px 0;
+}
+.urun-img{
+    background-color: #F9F9F9;
+}
+.urun-title{
+    display: flex;
+    flex-direction: column;
+}
+.ek-urunler-content hr{
+    border: 1px solid #F6F6F6;
+    margin: 15px 0;
+}
+.quantity{
+    background: #1E98C7;
+    border-radius: 60px;
+    width: 100px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button#white{
+    cursor: pointer;
+    margin: 0 8px;
+    padding: 5px 11px;
+    background-color: #FFF;
+    color: #1E98C7;
+    border-radius: 100%;
+}
+span#number{
+    color: #FFF;
+    font-weight: 600;
+}
+.urun-cards{
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.price-banner{
+    background: #F4F4F4;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px;
+}
+.price-banner h1{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+}
+.price-banner span{
+    margin-left: 15px;
+}
+.price-banner button{
+    margin-left: 20px;
+    padding: 10px 15px;
+    background: linear-gradient(94.76deg, #117AA7 9.47%, #0DA2C9 73.37%);
+    border-radius: 60px;
+    color: #FFF;
+    font-weight: 500;
+}

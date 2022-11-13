@@ -1,0 +1,58 @@
+.login-main{
+    background: no-repeat url(../assets/bg.svg);
+    height: 100vh;
+}
+.login-component{
+    margin-top: 80px;
+    display: grid;
+    place-items: center;
+}
+.login-component .login-title h1{
+    font-size: 2.6vw;
+}
+.login-component .login-title p{
+    font-size: 1.1vw;
+}
+.login-component .login-title{
+    text-align: center;
+    color: #FFF;
+    margin-bottom: 55px;
+}
+
+.login-card{
+    width: 420px;
+    height: 100%;
+    padding: 45px 25px;
+    background-color: #FFF;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-card input{
+    padding: 15px;
+    border: 1px solid #EFEFEF;
+    border-radius: 60px;
+    margin-bottom: 20px;
+}
+
+.login-card button{
+    background: linear-gradient(94.76deg, #117AA7 9.47%, #0DA2C9 73.37%);
+    padding: 15px;
+    border-radius: 60px;
+    color: #FFF;
+}
+.login-card h4{
+    text-align: center;
+    margin-top: 20px;
+    color: #000;
+    font-weight: 400;
+}
+.login-card h4 a{
+    margin-left: 5px;    
+    color: #0B91C5;
+    font-weight: 600;                   
+}
+
+         

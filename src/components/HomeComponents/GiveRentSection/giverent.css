@@ -1,0 +1,69 @@
+.giveRent{
+    position: relative;
+    width: 100%;
+    height: 720px;
+}
+.giveRent img#imgg{
+    position: absolute;
+    width: 100%;
+    top: -100px;
+    z-index: 0;
+}
+
+.giveRent .content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    padding: 60px 7%;
+}
+.giveRent .left-menu h1:nth-child(1){
+    color: #2689B2;
+}
+.giveRent .left-menu h1:nth-child(2){
+    color: #196CA5;
+}
+.giveRent .left-menu h1{
+    font-size: 3vw;
+}
+.giveRent .left-menu .item{
+    margin-top: 35px;
+}
+.giveRent .right-menu{
+    display: grid;
+    place-items: center;
+}
+.giveRent .right-menu img{
+    width: 80%;
+    height: auto;
+}
+.giveRent .item{
+    display: flex;
+    align-items: center;
+}
+.giveRent span#circle{
+    border: 1px solid #196da554;
+    color: #196CA5;
+    width: 10px;
+    height: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    border-radius: 100%;    
+    margin: 10px;
+}
+.giveRent .item{
+    display: flex;
+    align-items: center;
+}
+.giveRent .text h3{
+    font-weight: 500;
+    color: #196CA5;
+}
+.giveRent .text p{
+    font-size: 1vw;
+    color: #3D434C;
+}
+

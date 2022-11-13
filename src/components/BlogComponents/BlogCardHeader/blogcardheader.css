@@ -1,0 +1,38 @@
+.blog-main-page-card-header{
+    padding: 0 13%;
+}
+.blog-card-header{
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+}
+
+.blog-card-header h3{
+    font-size: 1.3vw;
+    max-width: 450px;
+    font-weight: 500;
+    color: #FFF;
+    bottom: 40px;
+    left: 40px;
+    position: absolute;
+}
+.circles{
+    display: flex;
+}
+.blog-card-header .circles{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+.circles img{
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+.circles img.active{
+    cursor:auto;
+    background-color: #FFF;
+}

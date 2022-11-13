@@ -1,0 +1,33 @@
+.advantages{
+    height: 800px;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 5%;
+    margin-bottom: 45px;
+}
+.advantages .flex{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.advantages .flex-1 h1{
+    font-size: 2.5vw;
+    margin-bottom: 70px;
+    margin-top: 30px;
+}
+
+.advantages > div:nth-of-type(2){
+    height: 780px;
+    padding: 200px 0;
+}
+    
+
+
+
+
+

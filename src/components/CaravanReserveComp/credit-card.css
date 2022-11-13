@@ -1,0 +1,43 @@
+.pay-inputs{
+    display: flex;
+    flex-direction: column;
+}
+.pay-inputs input{
+    background-color: #F8F8F8;
+    color: #929292;
+    padding: 15px;
+    width: 700px;
+    border-radius: 30px;
+    margin: 15px;
+}
+.tutar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 20px 0;
+}
+span#toplam{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+span#toplam-fiyat{
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    color: #1F98C7;
+}
+button#odeme-btn{
+    margin-top: 15px;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(94.76deg, #117AA7 9.47%, #0DA2C9 73.37%);
+    border-radius: 60px;
+}

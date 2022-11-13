@@ -1,0 +1,72 @@
+.btn{
+    cursor: pointer !important;
+    width: auto;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: 500; 
+    margin-right: 15px;
+}
+@media only screen and (max-width: 1550px) {
+.btn{
+    font-size: .99vw;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+} 
+.btn-white{
+    background-color: #FFFF;
+    color: #2094C6;
+}
+.btn-transparent{
+    background-color: transparent;
+    color: #FFFF;
+    border: 2px solid #FFFF;
+}
+.btn-transparent-blue{
+    background-color: transparent;
+    color: #196CA5;
+    border: 1px solid #EEEEEE;
+    margin-left: 10px;
+}
+.btn-blue{
+    background: linear-gradient(94.76deg, #117AA7 9.47%, #0DA2C9 73.37%);
+    color: #FFFF;
+}
+.btn-blue-big{
+    background: linear-gradient(94.76deg, #117AA7 9.47%, #0DA2C9 73.37%);
+    border-radius: 110px !important;
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    height: 65px !important; 
+    width: 140px;
+    margin-right: 5px;
+}
+.btn-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    color: #0DA0C9;
+    margin-right: 10px;
+    padding: 0;
+}
+
+.btn-blue-small{
+    background: linear-gradient(101.45deg, #127BA8 3.27%, #BDECFF 108.56%);
+    border-radius: 60px;
+    color: #FFF;
+}
+
+.active-button{
+    background: linear-gradient(94.76deg, #117AA7 9.47%, #0DA2C9 73.37%);
+    color: #FFFF;
+}
+
+.navbar-white-btn-blue{
+    background-color: transparent;
+    color: #1E98C7;
+    border: 2px solid #1E98C7 !important;
+    font-weight: 600;
+}

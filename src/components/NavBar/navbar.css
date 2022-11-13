@@ -1,0 +1,53 @@
+/* NAVBAR */
+.navbar{
+    display: flex;
+    align-items: center !important;
+    justify-content: space-between;
+    padding: 20px 8%;
+    background-color: transparent;
+}
+
+.left-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.left-menu ul{
+    display: flex;
+}
+
+.left-menu ul li{
+    font-size: 0.97vw;
+    cursor: pointer;
+    margin-left: 35px;
+    list-style-type: none;
+    font-weight: 500;
+}
+
+.hamburger-menu{
+    display: none;
+}
+
+.right-menu{
+    display: flex;
+}
+
+.right-menu button, .title-sec button{
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    
+}
+@media only screen and (max-width: 1060px) {
+    .left-menu ul{
+        display: none;
+    }
+    .right-menu .after-logged,.right-menu .before-logged{
+        display: none;
+    }
+    .hamburger-menu{
+        display: block;
+    }
+    
+}

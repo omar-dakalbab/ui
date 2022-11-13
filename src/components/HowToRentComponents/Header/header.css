@@ -1,0 +1,36 @@
+.header-content{
+    width: 100%; 
+    display: flex;
+    justify-content: space-around;
+    padding: 10% 15%;
+    position: relative;
+    margin-bottom: 270px;
+}
+img.headerbg{
+    width: 100%;
+    position: absolute;
+}
+.header-left h1{
+    width: 40%;
+    font-size: 3.5vw;
+    animation: fade-right 0.7s;
+}
+.header-right{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    animation: fade-left 0.7s;
+}
+.header-right span{
+    margin: 10px 0;
+}
+.header-right span:nth-child(2n-1){
+    font-size: 1.1vw;
+    font-weight: 300;
+}
+.header-right span:nth-child(2n){
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+  

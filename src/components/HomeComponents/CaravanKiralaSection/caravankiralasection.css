@@ -1,0 +1,56 @@
+
+.karavanKirala img#img{
+    position: absolute;
+    z-index: 0;
+}
+.left-menu img#mockup{
+    width: 80%;
+    height: auto;
+}
+.karavanKirala .content{
+    padding: 120px 150px;
+    background:no-repeat url(./assets/background.svg);
+}
+.content .right-menu{
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+}
+
+
+.karavanKirala .right-menu h1{
+    font-size: 3vw;
+    font-weight: 700;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.karavanKirala .item{
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    margin-left: 0;
+}
+span#circle{
+    border: 1px solid #FFF;
+    width: 10px;
+    height: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    border-radius: 100%;    
+    margin: 10px;
+    margin-left: 0;
+}
+.text h3{
+    font-weight: 500;
+}
+.text p{
+    font-size: .9vw;
+}
+
+.ed{
+    margin-top: 15px;
+    margin-right: 0;
+}

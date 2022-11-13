@@ -1,0 +1,40 @@
+
+.wrapper-white{
+    background-color: #FFF;
+    position: relative;
+    bottom: 300px;
+    z-index: 2;
+    border-radius: 36px 36px 0 0;
+    padding-top: 350px;
+}
+
+.blog-details-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.blog-details-wrapper p{
+    width: 850px;
+    margin-bottom: 40px;
+}
+.blog-details-wrapper h1{
+    margin-bottom: 30px;
+    max-width: 620px;
+}
+
+.blog-details-wrapper .logo-title h3{
+    font-weight: 500;
+    font-size: 24;
+}
+.blog-details-wrapper .logo-title p{
+    margin-bottom: 0;
+    font-size: 600;
+    color: #9897A3;
+    font-size: 16;
+}
+
+
+

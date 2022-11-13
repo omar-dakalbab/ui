@@ -1,0 +1,16 @@
+.caravans-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 55px;
+    height: 60vh;
+    background: no-repeat linear-gradient(180.3deg, #006E9D 0.26%, #BBEBFF 79%);
+}
+.caravans-header img{
+    position: absolute;
+}
+.caravans-header h1{
+    font-size: 3vw;
+    color: #FFF;
+}

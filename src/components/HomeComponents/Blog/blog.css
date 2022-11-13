@@ -1,0 +1,29 @@
+.blog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 760px;
+    background-color: #FBFBFB;  
+    margin-bottom: 60px;
+    padding: 50px 200px;
+}
+.blog h1:nth-child(1){
+    color: #2689B2;
+}
+.blog h1:nth-child(2){
+    color: #196CA5;
+}
+.blog h1{
+    font-size: 50px;
+}
+.blog-cards{
+    width: 75%;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+

@@ -1,0 +1,12 @@
+.banner{
+    background: #0EA3CA;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+}
+
+.banner .part ul li{
+    color: #FFF;
+}

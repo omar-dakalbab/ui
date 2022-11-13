@@ -1,0 +1,24 @@
+.signup-main{
+    background: no-repeat url(../assets/bg.svg);
+    height: 100%;
+    padding-bottom:150px;
+}
+.signup-component{
+    margin-top: 30px;
+    display: grid;
+    place-items: center;
+}
+.signup-component .signup-title h1{
+    font-size: 2.6vw;
+}
+.signup-component .signup-title p{
+    font-size: 1.1vw;
+}
+.signup-component .signup-title{
+    text-align: center;
+    color: #FFF;
+    margin-bottom: 55px;
+}
+
+
+         

@@ -1,0 +1,96 @@
+.phoneSection img#img{
+    position: absolute;
+    z-index: 0;
+}
+img#mockup{
+    width: 450px;
+}
+.content{
+    position: relative;
+    z-index: 2;
+    padding: 175px 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content .left-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.phoneSection .content .left-menu ul li{
+    font-size: 1vw;
+    width: auto;
+    margin: 0;
+    margin-right: 35px;
+    color: #196CA5;
+    padding: 6px;
+    width: auto;
+    cursor: pointer;
+}
+.phoneSection .content .left-menu ul li.active{
+    background: linear-gradient(93.81deg, #117AA7 14.63%, #0DA2C9 80.39%);
+    border-radius: 80px;
+    color: #FFF;
+    padding: 8px;
+    
+}
+.phoneSection .content .left-menu ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 55px;
+}
+.phoneSection .content .left-menu p{
+    margin-top: 25px;
+    width: 550px;
+    color: #3D434C;
+    font-weight: 400;
+}
+.content .left-menu h1{
+
+    font-size: 3vw;
+}
+
+.phoneSection .content .right-menu img.phone{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.phoneSection .content .right-menu{
+    position: relative;
+}
+
+.leftArrow{
+    width: 15%;
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50%;
+}
+.rightArrow{
+    width: 15%;
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50%;
+    right: 19%;
+}
+
+.leftPlant{
+    width: 10%;
+    height: auto;
+    position: absolute;
+    top: 600px;
+    left: 6%;
+}
+.rightPlant{
+    width: 10%;
+    height: auto;
+    position: absolute;
+    top: 500px;
+    right: 10%;
+    z-index: 2;
+}

@@ -1,0 +1,83 @@
+.background, .text{
+    position: relative;
+    z-index: 0;
+}
+
+.main{
+    height: auto;
+}
+.left-plant, .circle-bg, .cloud, .right-plant, .playButton{
+    position: absolute;
+}
+img.caravan{
+    width: 100%;
+    height: auto;
+}
+
+.text-group{
+    width: 479px;
+}
+
+.left-plant{
+    top: 115px;
+    left: 10%;
+}
+
+
+.cloud{
+    top: 85px;
+    left: 55%;
+}
+
+.right-plant{
+    top: 290px;
+    left: 85%;
+}
+
+
+/* 
+.playButton{
+    left: 30%;
+    top: 385px;
+} */
+
+
+#title-1{
+    font-size: 4vw;
+    font-weight: 500;
+    color: #127BA8;
+}
+
+#title-2{
+    font-size: 2vw;
+    font-weight: 500;
+    color: #127BA8;
+}
+
+.text-group p{
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.group{
+    position: relative;
+    z-index: 1;
+    padding: 90px 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1550px) {
+.group{
+    flex-direction: column;
+} 
+.group .text-group{
+    margin-top: 45px;
+    width: 600px;   
+}
+img.cloud{
+    display: none;
+}
+ 
+}

@@ -1,0 +1,108 @@
+
+
+
+
+.edit-btn button{
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+    margin-top: 15px;
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: #1E98C7;
+    font-weight: 600;
+    background-color: #FFF;
+}
+
+
+
+/* ADVERT EDIT  */
+
+.advert-edit button#geri{
+    position: absolute;
+    left: 0;
+    margin: 20px;
+    background: linear-gradient(94.76deg, #117AA7 9.47%, #0DA2C9 73.37%);
+    border-radius: 60px;
+    color: #FFF;
+    padding: 10px 25px;
+}
+
+.advert-edit{
+    display: flex;
+
+}
+
+.advert-edit-content{
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.advert-edit-content h1{
+    text-align: center;
+    margin-top: 55px;
+    margin-bottom: 35px;
+}
+.advert-edit-card{
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 6px 2px rgba(0, 0, 0, 0.07);
+    border-radius: 18px;
+}
+.advert-edit-card span#card-header{
+    color: #929292;
+}
+.advert-edit-radio-btn{
+    display: flex;
+    margin: 20px 0;
+}
+.advert-edit-card .file-images{
+    margin: 25px;
+}
+.advert-edit-content #aciklama{
+    resize: none;
+    height: 150px;
+    border-radius: 20px;
+}
+.advert-edit-card h3{
+    color: #171717;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
+}
+.advert-edit-radio-btn .radio-btn:first-child{
+    margin-right: 15px;
+}
+.advert-edit-content button#kaydet{
+    margin-top: 10px;
+    width: 100%;
+    background: linear-gradient(94.76deg, #117AA7 9.47%, #0DA2C9 73.37%);
+    border-radius: 60px;
+    padding: 10px;
+    color: #FFF;
+}
+.date-calendar{
+    background-color: #F8F8F8;
+    padding: 15px;
+    position: relative;
+    margin: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button#delete-button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #FFF;
+    background-color: #0DA2C9;
+    border-radius: 0 18px 0 18px;
+    padding: 15px;
+    font-size: 1.5rem;
+}

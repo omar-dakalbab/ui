@@ -1,0 +1,95 @@
+.karavan-reserve-comp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 15%;
+    width: 100%;
+}
+.karavan-reserve-left{
+    margin-right: 50px;
+    margin-top: 50px;
+    background-color: #FFF;
+    width: 100%;
+}
+.karavan-reserve-left span#title{
+    color: #1E98C7;
+    font-weight: 600;
+    font-size: 23px;
+}
+.karavan-reserve-left h1{
+    font-size: 3rem;
+    margin-bottom: 45px;
+}
+.karavan-reserve-left textarea{
+    background: #F8F8F8;
+    border-radius: 24px;
+    resize: none;
+    height: 120px;
+}
+.karavan-reserve-left button#devam{
+    width: 100%;
+    background: linear-gradient(94.76deg, #117AA7 9.47%, #0DA2C9 73.37%);
+    border-radius: 60px;
+    color: #FFF;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.karavan-reserve-right{
+    padding-left: 35px;
+    padding-right: 15%;
+    width: 100%;
+    padding-top: 100px;
+    background-color: #FBFBFB;
+}
+.karavan-reserve-right h3{
+    margin-top: 45px;
+    margin-bottom: 25px;
+    font-size: 1.7rem;
+}
+.reserve-icons{
+    display: flex;
+    flex-direction: column;
+}
+.reserve-icons span{
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    color: #196CA5;
+}
+.karavan-reserve-right hr{
+    margin: 25px;
+    width: 100%;
+}
+span#price{
+    font-weight: 500;
+    color: #196CA5;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+span#price, #icon-price{
+    font-size: 3rem;
+}
+
+
+/* Success Message */
+.success-message{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.success-message p{
+    color: #A4A4A4;
+}
+.success-message button{
+    background: linear-gradient(94.76deg, #117AA7 9.47%, #0DA2C9 73.37%);
+    border-radius: 60px;
+    padding: 10px;
+    width: 20%;
+    color: #FFF;
+    font-size: 1.2rem;
+    margin-top: 45px;
+}

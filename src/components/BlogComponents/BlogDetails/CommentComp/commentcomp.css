@@ -1,0 +1,24 @@
+.comment-comp{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 70px 0;
+    width: 100%;
+    background-color:#FAFAFA;
+    padding: 50px;
+}
+
+.comment-comp input[type=text]{
+    margin: 0 20px;
+    border: 1px solid #E9EBF0;
+    padding: 10px 20px;
+    border-radius: 14px;
+    color: #67727E;
+    width: 30%;
+}
+.comment-comp input[type=submit]{
+    padding: 10px;
+    border-radius: 60px;
+    color: #FFF;
+    background: linear-gradient(94.76deg, #117AA7 9.47%, #0DA2C9 73.37%);
+}

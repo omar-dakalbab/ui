@@ -1,0 +1,46 @@
+.give-rent-header{
+    height: 870px;
+    width: 100%;
+    background: no-repeat url(./assets/header-bg.png);
+    background-size:contain;
+    background-position:center;
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+    padding: 0 100px;
+}
+
+.give-rent-header h1{
+    font-size: 3vw;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.give-rent-header h2{
+    line-height: 150%;
+    font-weight: 500;
+    font-size: 1.5vw;
+    margin-bottom: 10px;
+}
+
+
+.give-rent-header .flex-1{
+    height: 100%;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    animation: fade-right 0.7s;
+}
+
+
+.flex-2 img.cycle-img{
+    width: 100%;
+    animation: fade-left 0.7s;
+}
+
+.text-2 p{
+    max-width: 320px;
+    line-height: 171.5%;
+    color: #666666;
+} 
+

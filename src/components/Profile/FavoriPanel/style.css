@@ -1,0 +1,65 @@
+.like-button {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    right: 29px;
+    color: red;
+}
+
+.fav-panel{
+    display: flex;
+    flex-direction: row;
+}
+.fav-card{
+    height: 450px;
+    position: relative;
+    box-shadow: -5px 5px 19px 5px rgba(0, 0, 0, 0.09);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+.fav-card img{
+    margin: 7px;
+}
+.fav-card h3{
+    padding: 20px;
+}
+hr{
+    border: 1px solid #EBEBEB ;
+    width: 100%;
+}
+.location{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #196CA5;
+    font-weight: 500;
+}
+.location i{
+    margin-right: 10px;
+    color: #C5C5C5;
+}
+
+.icons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 10px;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    color: #196CA5;
+    font-weight: 500;
+}
+.icon img{
+    margin-right: 15px;
+}
+.fav-panel-content{
+    display: flex;
+    padding: 50px;
+    height: 75vh;
+    flex-wrap: wrap;
+}

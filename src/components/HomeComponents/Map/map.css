@@ -1,0 +1,21 @@
+.map h1:nth-child(1){
+    color: #2689B2;
+}
+.map h1:nth-child(2){
+    color: #196CA5;
+}
+.map img{
+    margin-top: 60px;
+    width: 75%;
+    height: auto;
+}
+.map{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 760px;
+    margin-bottom: 60px;
+    padding-top: 70px;
+}
