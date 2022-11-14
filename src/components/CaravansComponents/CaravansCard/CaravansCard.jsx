@@ -27,7 +27,6 @@ const CaravansCard = (props) => {
         }
 
     }, []);
-    console.log(carad)
     return (
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
             {carad.length === 0 ? (

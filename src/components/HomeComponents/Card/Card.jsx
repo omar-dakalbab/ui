@@ -27,7 +27,7 @@ const Card = (props) => {
                 SetLiked(false)
             }
         })
-    })
+    }, [])
 
     const insertLike = async () => {
         try {
