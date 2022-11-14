@@ -32,7 +32,7 @@ const AdminBlogs = () => {
     formData.append('blog_header', inputs.blog_header)
     formData.append('blog_body', inputs.blog_body)
     try {
-      await Axios.post("https://caravinn-test.herokuapp.com/api/blog/add", formData)
+      await Axios.post("https://caravinn-test.herokuapp.com/api/blog/add-blog", formData)
     }
     catch (err) {
       console.log(err)
