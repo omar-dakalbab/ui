@@ -26,13 +26,13 @@ const AdminBlogs = () => {
   }
   const handleInsert = async e => {
     e.preventDefault()
-    let formData = new FormData()
-    // formData.append('filename', image.data)
-    formData.append('blog_title', inputs.blog_title)
-    formData.append('blog_header', inputs.blog_header)
-    formData.append('blog_body', inputs.blog_body)
+    // let formData = new FormData()
+    // // formData.append('filename', image.data)
+    // formData.append('blog_title', inputs.blog_title)
+    // formData.append('blog_header', inputs.blog_header)
+    // formData.append('blog_body', inputs.blog_body)
     try {
-      await Axios.post("https://caravinn-test.herokuapp.com/api/blog/add-blog", formData)
+      await Axios.post("https://caravinn-test.herokuapp.com/api/blog/add-blog", inputs)
     }
     catch (err) {
       console.log(err)
