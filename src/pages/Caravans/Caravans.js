@@ -14,7 +14,7 @@ const Caravans = () => {
       <Navbar />
       <Header />
       <div className="wrapper-white" style={{ bottom: 120, padding: '75px 10%' }}>
-        <Buttons style={{marginBottom: '20px'}}/>
+        <Buttons />
         <CaravansCard limit="24" request={location.location} />
       </div>
     </div>

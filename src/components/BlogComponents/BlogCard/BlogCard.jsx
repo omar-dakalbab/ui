@@ -9,7 +9,7 @@ const BlogCard = (props) => {
     const [blogList, SetblogList] = useState([]);
     let navigate = useNavigate();
     useEffect(() => {
-        Axios.get("https://caravinn-test.herokuapp.com/api/blog/post").then((response) => {
+        Axios.get("http://localhost:3001/api/blog/post").then((response) => {
             SetblogList(response.data)
         });
     }, []);

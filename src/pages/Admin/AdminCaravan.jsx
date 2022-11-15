@@ -23,7 +23,7 @@ const AdminCaravan = () => {
     e.preventDefault()
 
     try {
-      await Axios.post("https://caravinn-test.herokuapp.com/api/caravan/add", inputs)
+      await Axios.post("http://localhost:3001/api/caravan/add", inputs)
     }
     catch (err) {
       console.log(err)
@@ -34,7 +34,7 @@ const AdminCaravan = () => {
   const [caravan_list, SetCaravan_list] = useState([]);
 
   const getCaravan = () => {
-    Axios.get("https://caravinn-test.herokuapp.com/api/caravan/").then((response) => {
+    Axios.get("http://localhost:3001/api/caravan/").then((response) => {
       SetCaravan_list(response.data)
     }, [])
   }
@@ -44,7 +44,7 @@ const AdminCaravan = () => {
   }, [])
 
   const deleteItem = (id) => {
-    Axios.delete(`https://caravinn-test.herokuapp.com/api/caravan/delete/${id}`).then((response) => {
+    Axios.delete(`http://localhost:3001/api/caravan/delete/${id}`).then((response) => {
       console.log(response)
       getCaravan()
     })

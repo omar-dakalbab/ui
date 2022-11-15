@@ -62,13 +62,13 @@ img.caravan{
 .group{
     position: relative;
     z-index: 1;
-    padding: 90px 300px;
+    padding: 90px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-@media only screen and (max-width: 1550px) {
+@media only screen and (max-width: 1100px) {
 .group{
     flex-direction: column;
 } 

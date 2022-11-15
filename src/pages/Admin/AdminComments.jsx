@@ -6,7 +6,7 @@ const AdminComments = () => {
     const [caravan_list, SetCaravan_list] = useState([]);
 
     const getCaravan = () => {
-        Axios.get("https://caravinn-test.herokuapp.com/api/comment/").then((response) => {
+        Axios.get("http://localhost:3001/api/comment/").then((response) => {
             SetCaravan_list(response.data)
         }, [])
     }
@@ -16,7 +16,7 @@ const AdminComments = () => {
     }, [])
 
     const deleteItem = (id) => {
-        Axios.delete(`https://caravinn-test.herokuapp.com/api/comment/${id}`).then((response) => {
+        Axios.delete(`http://localhost:3001/api/comment/${id}`).then((response) => {
             console.log(response)
             getCaravan()
         })

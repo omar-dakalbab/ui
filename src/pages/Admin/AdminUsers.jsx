@@ -7,7 +7,7 @@ const AdminUsers = () => {
   const [user_list, SetUser_list] = useState([]);
 
   const getUsers = () => {
-    Axios.get("https://caravinn-test.herokuapp.com/api/user/").then((response) => {
+    Axios.get("http://localhost:3001/api/user/").then((response) => {
       SetUser_list(response.data)
     }, [])
   }
@@ -16,7 +16,7 @@ const AdminUsers = () => {
     getUsers()
   }, [])
   const deleteItem = (id) => {
-    Axios.delete(`https://caravinn-test.herokuapp.com/api/user/remove-user/${id}`).then((response) => {
+    Axios.delete(`http://localhost:3001/api/user/remove-user/${id}`).then((response) => {
       console.log(response)
       getUsers()
     })

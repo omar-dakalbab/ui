@@ -1,9 +1,7 @@
 .home-header{
     background: no-repeat linear-gradient(180.3deg, #006E9D 0.26%, #BBEBFF 79%);
 }
-input[type="date"]::-webkit-calendar-picker-indicator {
-    background: url(../../../assets/date.svg) no-repeat;
-}
+
 .title-sec{
     width: 100%;
     position: relative;
@@ -98,6 +96,9 @@ input#mainInput{
     display: flex;
     align-items: center;
     margin-left: 20px;
+}
+.dateInput img{
+    margin-right: 15px;
 }
 button{
     cursor: pointer;

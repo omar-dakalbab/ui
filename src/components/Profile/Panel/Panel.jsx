@@ -34,7 +34,7 @@ const Panel = () => {
 
     const { currentUser } = useContext(AuthContext)
     const getUser = () => {
-        Axios.get(`https://caravinn-test.herokuapp.com/api/user/${currentUser.id}`).then((resp) => {
+        Axios.get(`http://localhost:3001/api/user/${currentUser.id}`).then((resp) => {
             setState({ ...resp.data[0] })
         })
     }
@@ -66,7 +66,7 @@ const Panel = () => {
     const updatePassword = () => {
         if (inputs.password === inputs.passwordConfirm) {
             try {
-                Axios.put(`https://caravinn-test.herokuapp.com/api/user/update-password/${currentUser.id}`, inputs).then((resp) => {
+                Axios.put(`http://localhost:3001/api/user/update-password/${currentUser.id}`, inputs).then((resp) => {
                     setPswError('Şifre Değiştirildi!')
                 })
             }
@@ -75,7 +75,7 @@ const Panel = () => {
             }
         }
         else {
-            setPswError("Password inputs are not same!")
+            setPswError("Şifreler eşleşmiyor")
         }
     }
     return (
@@ -112,7 +112,7 @@ const Panel = () => {
                     </Box>
                 </Modal>
                 <div className='grey-div'></div>
-                <button className="change-password" onClick={handleOpen}><KeyIcon style={{ marginRight: '5px' }} /> Change Password</button>
+                <button className="change-password" onClick={handleOpen}><KeyIcon style={{ marginRight: '5px' }} /> Şifre Değiştir</button>
                 <NavLink to={`/profile/edit`} ><button className="edit">Düzenle</button></NavLink>
                 <img src={profilePic} alt="" />
 

@@ -13,10 +13,13 @@ const Card = (props) => {
     const userid = props.userid;
     const [liked, SetLiked] = useState(false)
     useEffect(() => {
-        getLike()
-    }, [])
-    const getLike = () => {
-        Axios.get(`https://caravinn-test.herokuapp.com/api/like/${id}/${userid}`).then((response) => {
+        const config = {
+            withCredentials: true,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        };
+        Axios.get(`http://localhost:3001/api/like/${id}/${userid}`, config).then((response) => {
             setLikeData(response.data)
             if (likeData.length > 0) {
                 SetLiked(true)
@@ -24,10 +27,11 @@ const Card = (props) => {
                 SetLiked(false)
             }
         })
-    }
+    })
+
     const insertLike = async () => {
         try {
-            await Axios.post(`https://caravinn-test.herokuapp.com/api/like/likeInsert/${id}/${userid}`).then((response) => {
+            await Axios.post(`http://localhost:3001/api/like/likeInsert/${id}/${userid}`).then((response) => {
                 console.log(response)
             })
         }

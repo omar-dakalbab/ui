@@ -13,7 +13,7 @@ const BlogDetails = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
     Axios.get(
-      `https://caravinn-test.herokuapp.com/api/blog/post/${blogId}`
+      `http://localhost:3001/api/blog/post/${blogId}`
     ).then((data) => {
       setPost({
         blog_image: data.data[0].blog_image,

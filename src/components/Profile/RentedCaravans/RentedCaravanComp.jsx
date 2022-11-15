@@ -11,7 +11,7 @@ const RentedCaravanComp = (props) => {
   const [carad, SetCardList] = useState([]);
   const getRentedCaravan = (props) => {
 
-    Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/rented-user-id/${currentUser.id}`).then((response) => {
+    Axios.get(`http://localhost:3001/api/caravan/rented-user-id/${currentUser.id}`).then((response) => {
       SetCardList(response.data)
     })
 

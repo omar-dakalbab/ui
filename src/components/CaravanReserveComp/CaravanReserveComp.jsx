@@ -36,7 +36,7 @@ const CaravanReserveComp = () => {
 
 
 
-    Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/${id}`).then((response) => {
+    Axios.get(`http://localhost:3001/api/caravan/${id}`).then((response) => {
       SetCaravan(response.data)
     })
     setStartDate(moment(dateStart).format('L'))

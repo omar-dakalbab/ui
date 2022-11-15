@@ -18,7 +18,7 @@ const Edit = () => {
 
   const [user, setUser] = useState({});
   const getUser = () => {
-    Axios.get(`https://caravinn-test.herokuapp.com/api/user/${currentUser.id}`).then((resp) => {
+    Axios.get(`http://localhost:3001/api/user/${currentUser.id}`).then((resp) => {
       setState({ ...resp.data[0] })
     })
   }
@@ -42,7 +42,7 @@ const Edit = () => {
   const handleSubmit = () => {
     console.log(currentUser.id)
     Axios
-      .put(`https://caravinn-test.herokuapp.com/api/user/edit-user/${currentUser.id}`, {
+      .put(`http://localhost:3001/api/user/edit-user/${currentUser.id}`, {
         name,
         email,
         phone_number,

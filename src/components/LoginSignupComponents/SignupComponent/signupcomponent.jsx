@@ -64,9 +64,18 @@ const SignupComponent = () => {
       setErr(errors)
     }
     else {
-      Axios.post("https://caravinn-test.herokuapp.com/api/auth/register", inputs).then((response) => {
-        errors.push(response.data)
-      })
+      try {
+        Axios.post("http://localhost:3001/api/auth/register", inputs).then((response) => {
+          errors.push(response.data)
+          setErr("Kayıdınız Yapıldı, Giriş yapabilirsiniz")
+        }).catch(function (err) {
+          if (err.response) {
+            setErr("Hata Oluştu!")
+          }
+        })
+      } catch (err) {
+        setErr("Hata Oluştu! ")
+      }
       // setErr('Kayıt yapılıyor...')
       // await delay(1000);
       // setErr("Kayıdınız Yapıldı, Giriş yapabilirsiniz")
@@ -74,7 +83,7 @@ const SignupComponent = () => {
       // nav('/login')
     }
   }
-
+  const [type, setType] = useState('text');
   return (
     <div className='signup-component'>
       <div className="signup-title">
@@ -82,7 +91,7 @@ const SignupComponent = () => {
         <p>Hesabınız dakikalar içinde açın karavan kiralayın <br /> veya karavanınızı kiraya verin</p>
       </div>
       <div className="login-card">
-        {errMessage && errMessage}
+        <span style={{ textAlign: 'center', marginBottom: '10px'}}>{errMessage && errMessage}</span>
         <input type="text" placeholder='Adınzı'
           name='name'
           onChange={handleChange}
@@ -100,7 +109,11 @@ const SignupComponent = () => {
           onChange={handleChange}
         />
         {/* <label style={{ textAlign: 'center', marginBottom: '10px' }} htmlFor="">Doğum Tarihi</label> */}
-        <input type="date" placeholder='Date' style={{ padding: '15px', border: '1px solid #EFEFEF', borderRadius: '60px', marginBottom: '20px' }}
+        <input type={type}
+          onFocus={() => setType('date')}
+          onBlur={() => setType('text')}
+          placeholder='Doğum Tarihi'
+          style={{ padding: '15px', border: '1px solid #EFEFEF', borderRadius: '60px', marginBottom: '20px' }}
           name='dateofbirth'
           onChange={handleChange}
         />

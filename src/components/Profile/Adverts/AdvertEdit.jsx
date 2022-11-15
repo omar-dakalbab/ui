@@ -28,7 +28,7 @@ const AdvertEdit = () => {
   const { id } = useParams()
   const getCaravan = () => {
 
-    Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/${id}`).then((resp) => {
+    Axios.get(`http://localhost:3001/api/caravan/${id}`).then((resp) => {
       setState({ ...resp.data[0] })
     })
   }
@@ -49,12 +49,12 @@ const AdvertEdit = () => {
 
   }, [])
   const caravanDelete = () => {
-    Axios.delete(`https://caravinn-test.herokuapp.com/api/caravan/delete/${id}`)
+    Axios.delete(`http://localhost:3001/api/caravan/delete/${id}`)
     nav('/profile/adverts')
   }
   const handleSubmit = () => {
     Axios
-      .put(`https://caravinn-test.herokuapp.com/api/caravan/update-by-user/${id}`, {
+      .put(`http://localhost:3001/api/caravan/update-by-user/${id}`, {
         caravan_title,
         caravan_type,
         road,

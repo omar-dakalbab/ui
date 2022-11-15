@@ -20,7 +20,7 @@ const FavCard = (props) => {
     })
     const checkLikes = () => {
 
-        Axios.get(`https://caravinn-test.herokuapp.com/api/like/${id}/${currentUser.id}`).then((response) => {
+        Axios.get(`http://localhost:3001/api/like/${id}/${currentUser.id}`).then((response) => {
             setLikeData(response.data)
             if (likeData.length > 0) {
                 SetLiked(true)
@@ -32,7 +32,7 @@ const FavCard = (props) => {
 
     const insertLike = async () => {
         try {
-            await Axios.post(`https://caravinn-test.herokuapp.com/api/like/likeInsert/${id}/${currentUser.id}`).then((response) => {
+            await Axios.post(`http://localhost:3001/api/like/likeInsert/${id}/${currentUser.id}`).then((response) => {
                 console.log(response)
 
             })
