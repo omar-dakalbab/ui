@@ -21,6 +21,7 @@ const CommentsComp = () => {
             setUser({
                 name: resp.data[0].name
             })
+            console.log(user.name)
         })
     }
 
