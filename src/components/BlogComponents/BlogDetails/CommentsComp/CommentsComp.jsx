@@ -18,10 +18,7 @@ const CommentsComp = () => {
             setComment(resp.data)
         })
         Axios.get(`https://caravinn-test.herokuapp.com/api/user/${comment.userId}`).then((resp) => {
-            setUser({
-                name: resp.data[0].name
-            })
-            console.log(user.name)
+            console.log(resp)
         })
     }
 
