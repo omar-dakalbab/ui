@@ -23,10 +23,13 @@ const BlogDetailsWrapper = (props) => {
                     <p>Caravınn Ailesi</p>
                 </div>
             </div>
+
             {user ?
                 (
-                    
-                    <CommentsComp />
+                    <>
+                        <CommentComp />
+                        <CommentsComp />
+                    </>
                 )
                 :
                 (<LoginFirstComp />)
