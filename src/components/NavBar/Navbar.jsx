@@ -48,13 +48,14 @@ const Navbar = () => {
                     <li>
                         <NavLink style={({ isActive }) => ({
                             color: isActive ? '#FFF' : '#FFF'
-                        })} to="/about-us">Hakkımızda</NavLink>
+                        })} to="/bize-ulasin">Bize Ulaşın</NavLink>
                     </li>
                     <li>
                         <NavLink style={({ isActive }) => ({
                             color: isActive ? '#FFF' : '#FFF'
-                        })} to="/bize-ulasin">Bize Ulaşın</NavLink>
+                        })} to="/about-us">Hakkımızda</NavLink>
                     </li>
+
 
 
 
