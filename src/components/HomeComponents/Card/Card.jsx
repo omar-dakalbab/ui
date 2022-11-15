@@ -56,7 +56,7 @@ const Card = (props) => {
                 <hr />
 
                 <div className="location">
-                    <p>{props.price} TL</p>
+                    <p style={{fontSize: '20px', fontWeight: 700, color: '#196CA5'}}>{props.price} TL</p>
                 </div>
 
                 <hr />
