@@ -103,7 +103,7 @@ const AdminBlogs = () => {
                   <td>{val.blog_title}</td>
                   <td>{val.blog_header}</td>
                   <td id='blog_body'>{val.blog_body}</td>
-                  <td>{moment(val.date_created).format('MMMM Do YYYY, h:mm:ss a')}</td>
+                  <td>{moment(val.date_created).fromNow()}</td>
 
                   <Link to={`update/${val.id}`}><button style={{ margin: 10, padding: 15 }}>Düznle</button></Link>
                   <button onClick={() => deleteItem(val.id)} style={{ margin: 10, padding: 15 }}>Sil</button>

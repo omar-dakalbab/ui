@@ -32,6 +32,9 @@
     margin: 10px 50px;
     width: 300px;
 }
+.value-card img{
+    margin: 30px;
+}
 .value-card h1{
     margin-bottom: 10px;
 }

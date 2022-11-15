@@ -1,11 +1,11 @@
 import React from 'react'
 import './caravangroup.css'
-import caravanGroup from './assets/caravan-group.svg'
+
 const CaravanGroup = () => {
     return (
         <div className='caravan-group'>
             <div className="flex-1">
-                <img src={caravanGroup} alt="caravan-group-img" className='caravan-group-img' />
+                {/* <img src={caravanGroup} alt="caravan-group-img" className='caravan-group-img' /> */}
             </div>
             <div className="flex-2">
                 <h2>1000'den fazla karavan ile içinden istediğinizi kiralayın</h2>

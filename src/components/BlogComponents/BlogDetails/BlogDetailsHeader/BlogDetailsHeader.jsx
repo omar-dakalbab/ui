@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { MdKeyboardArrowLeft } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
+import moment from 'moment'
 import './blogdetailsheader.css'
 const BlogDetails = (props) => {
     const [fileName, setFileName] = useState('')
@@ -20,7 +21,7 @@ const BlogDetails = (props) => {
                     <NavLink to='/blog' style={{ color: '#FFF' }}>Tüm yazılara geri dön</NavLink>
                 </h3>
                 <h1>{props.blog_title}</h1>
-                <span>{props.blog_time}</span>
+                <span>{moment(props.blog_time).fromNow()}</span>
                 <div className="blog-details-header-div">
                     <img className='blog-details-header-img' src={process.env.PUBLIC_URL + `/img/${fileName}`} alt="" />
                     {/* <img className='blog-details-header-img' src={bg} alt="" /> */}

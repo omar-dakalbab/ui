@@ -1,13 +1,13 @@
 .give-rent-header{
     height: 870px;
     width: 100%;
-    background: no-repeat url(./assets/header-bg.png);
+    background: no-repeat url(./assets/header-bg.svg);
     background-size:contain;
     background-position:center;
     display: flex;
     justify-content: space-around;  
     align-items: center;
-    padding: 0 100px;
+    padding: 3% 14%;
 }
 
 .give-rent-header h1{
@@ -22,10 +22,14 @@
     margin-bottom: 10px;
 }
 
+.give-rent-header .text-1 h3{
+    font-weight: 400;
+}
 
 .give-rent-header .flex-1{
     height: 100%;
     padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -34,6 +38,7 @@
 
 
 .flex-2 img.cycle-img{
+    margin-top: 50px;
     width: 100%;
     animation: fade-left 0.7s;
 }

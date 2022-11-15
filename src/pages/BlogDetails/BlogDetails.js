@@ -28,7 +28,7 @@ const BlogDetails = () => {
     <div className="blog-details">
       <div className="bl-bg">
         <NavBar />
-        <BlogDetailsHeader blog_image={post.blog_image} blog_title={post.blog_title} blog_time={moment(post.date_created).fromNow()} />
+        <BlogDetailsHeader blog_image={post.blog_image} blog_title={post.blog_title} blog_time={post.date_created} />
       </div>
       <div className="wrapper-white">
         <BlogDetailsWrapper header={post.blog_header} body={post.blog_body} blogID={blogId}/>

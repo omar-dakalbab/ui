@@ -60,8 +60,21 @@
 }
 
 .fea-card img{
-    width: 40%;
+    width: 20%;
 }
 .card-4 img{
-    width: 60%;
+    width: 30%;
+    margin: 30px 0;
+}
+.card-4{
+    padding: 4%;
+}
+.card-3{
+    padding: 4% 6%;
+}
+.card-3 img{
+    margin: 50px 0;
+}
+.card-2 img, .card-1 img{
+    margin: 50px;
 }

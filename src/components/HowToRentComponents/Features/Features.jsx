@@ -1,9 +1,9 @@
 import React from 'react'
 import './features.css'
-import percentage from './assets/percentage.svg'
-import earth from './assets/earth.svg'
-import caravan from './assets/caravan.svg'
-import notification from './assets/notification.svg'
+import notification from './assets/bell-icon.png'
+import cal from './assets/calendar-icon.png'
+import kaz from './assets/kazan-icon.png'
+import money from './assets/money-icon.png'
 
 
 const Features = () => {
@@ -16,7 +16,7 @@ const Features = () => {
                         <p>Yüklediğin Anda her yükleyişte
                             %1 Ücret Kazanın</p>
                     </div>
-                    <img className='perc-img'  src={percentage} alt="perc-img" />
+                    <img className='perc-img'  src={money} alt="perc-img" />
                 </div>
                 <div className="fea-card card-2">
                     <div className="text">
@@ -24,14 +24,14 @@ const Features = () => {
                         <p>Kullanmadığınız günleri özel
                             olarak sistem içinden ayarlayın.</p>
                     </div>
-                    <img className='earth-img' src={earth} alt="earth-img" />
+                    <img className='earth-img' src={cal} alt="earth-img" />
                 </div>
             </div>
             <div className="vert-cards">
                 <div className="fea-card card-3">
                     <div className="text"><h3>Kiralamaya Başla %1 Kazan</h3>
                         <p>Her kiralamanda Anda her yükleyişte %1 Ücret Kazanın</p></div>
-                    <img src={caravan} className="caravan-img" alt="caravan-img" />
+                    <img src={kaz} className="caravan-img" alt="caravan-img" />
                 </div>
                 <div className="fea-card card-4">
                     <h2>Anlık <br /> Bildirimler</h2>

@@ -15,7 +15,6 @@ const HowToRent = () => {
     <div style={{backgroundColor: '#FFF'}}>
       <NavBarWhite />
       <Header />
-      <CaravanGroup/>
       <InformationSection/>
       <Advantages/>
       <Features/>

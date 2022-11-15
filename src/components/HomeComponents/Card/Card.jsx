@@ -53,17 +53,17 @@ const Card = (props) => {
             <NavLink style={{ color: '#000' }} to={`/caravan/${id}`}>
                 <img src={props.img} alt='' />
                 <h3>{props.title}</h3>
+                <hr />
+
+                <div className="location">
+                    <p>{props.price} TL</p>
+                </div>
 
                 <hr />
 
                 <div className="location">
                     <i className="fa-solid fa-location-dot"></i>
                     <p>{props.location}</p>
-
-                </div>
-                <div className="location">
-                    <i className="fa-solid fa-location-dot"></i>
-                    <p>{props.price}</p>
                 </div>
 
                 <hr />

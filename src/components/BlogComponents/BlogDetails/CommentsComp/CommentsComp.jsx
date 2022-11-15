@@ -2,13 +2,10 @@ import React, { useState, useEffect } from 'react'
 import './commentscomp.css'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { AiOutlineMinus } from 'react-icons/ai'
-import { FaReply } from 'react-icons/fa'
 import profile from './profile.png'
 import Axios from 'axios'
 import { useParams } from 'react-router-dom'
 import moment from 'moment'
-import { useContext } from 'react'
-import { AuthContext } from '../../../../context/authContext'
 const CommentsComp = () => {
     let { blogId } = useParams();
     const [comment, setComment] = useState([]);

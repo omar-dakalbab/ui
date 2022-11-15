@@ -18,9 +18,25 @@
     align-items: center;
     justify-content: center;
     margin: 25px;
-    width: 200px;
-    height: 200px;
+    width: 265px;
+    height: 265px;
     background-color: #FFF;
+}
+.circle-card img{
+    margin: 15px;
+}
+.circle-card h4{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #000000;
+}
+.circle-card span{
+    color: #1E98C7;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+
 }
 .about-wrapper-content{
     margin-top: 100px;

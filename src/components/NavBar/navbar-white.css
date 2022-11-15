@@ -19,16 +19,12 @@
     display: flex;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
 .left-menu-white ul li{
-    font-size: 0.89vw;
+    font-size: 0.9vw;
     cursor: pointer;
-    margin-left: 35px;
+    margin-left: 25px;
     list-style-type: none;
     font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-    line-height: 24px;
 }
 .after-logged, .before-logged{
     display: flex;

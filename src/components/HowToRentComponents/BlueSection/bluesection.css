@@ -1,11 +1,12 @@
 .blue-section{
     background-color: #21A7DB;
     width: 100%;
-    padding: 30px 200px;
+    padding: 30px 7%;
+    padding-left: 12%;
 }
 
 img.blue-section-img{
-    width: 100%;
+    width: 80%;
 }
 
 .blue-section .flex{

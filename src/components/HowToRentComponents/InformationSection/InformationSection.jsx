@@ -2,7 +2,7 @@ import React from 'react'
 import './informationsection.css'
 import Button from '../../Button/Button'
 import bg from './assets/bg.svg'
-import hand from './assets/hand.svg'
+import hand from './assets/location-icon.png'
 import { Link } from 'react-router-dom'
 const InformationSection = () => {
     return (
