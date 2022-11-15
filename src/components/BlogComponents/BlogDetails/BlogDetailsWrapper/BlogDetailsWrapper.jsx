@@ -26,16 +26,13 @@ const BlogDetailsWrapper = (props) => {
 
             {user ?
                 (
-                    <>
-                        <CommentComp />
-                       
-                    </>
+
+                    <CommentComp />
                 )
                 :
                 (<LoginFirstComp />)
             }
-             <CommentsComp />
-
+            <CommentsComp />
             <BlogSuggestions />
         </div>
     )

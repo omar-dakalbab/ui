@@ -12,13 +12,9 @@ import { AuthContext } from '../../../../context/authContext'
 const CommentsComp = () => {
     let { blogId } = useParams();
     const [comment, setComment] = useState([]);
-    const [user, setUser] = useState([]);
     const getComments = () => {
         Axios.get(`https://caravinn-test.herokuapp.com/api/comment/get-comments/${blogId}`).then((resp) => {
             setComment(resp.data)
-        })
-        Axios.get(`https://caravinn-test.herokuapp.com/api/user/${comment.userId}`).then((resp) => {
-            console.log(resp)
         })
     }
 
@@ -45,7 +41,7 @@ const CommentsComp = () => {
                                     <div className="comment-card-flex">
                                         <div className="prof">
                                             <img src={profile} alt="profile-img" />
-                                            <h3>{user.name}</h3>
+                                            <h3>{val.name}</h3>
                                             <span>{moment(val.date_created).fromNow()}</span>
                                         </div>
                                         {/* <div className="reply-btn">
