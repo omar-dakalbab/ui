@@ -8,7 +8,7 @@ const CommentComp = (props) => {
     const { currentUser } = useContext(AuthContext)
     let { blogId } = useParams();
     const insertComment = () => {
-        Axios.post(`http://localhost:3001/api/comment/insert-comment/${currentUser.id}/${blogId}`, inputs).then((response) => {
+        Axios.post(`https://caravinn-test.herokuapp.com/api/comment/insert-comment/${currentUser.id}/${blogId}`, inputs).then((response) => {
             console.log(response.data)
         })
     }

@@ -34,7 +34,7 @@ const Panel = () => {
 
     const { currentUser } = useContext(AuthContext)
     const getUser = () => {
-        Axios.get(`http://localhost:3001/api/user/${currentUser.id}`).then((resp) => {
+        Axios.get(`https://caravinn-test.herokuapp.com/api/user/${currentUser.id}`).then((resp) => {
             setState({ ...resp.data[0] })
         })
     }
@@ -66,7 +66,7 @@ const Panel = () => {
     const updatePassword = () => {
         if (inputs.password === inputs.passwordConfirm) {
             try {
-                Axios.put(`http://localhost:3001/api/user/update-password/${currentUser.id}`, inputs).then((resp) => {
+                Axios.put(`https://caravinn-test.herokuapp.com/api/user/update-password/${currentUser.id}`, inputs).then((resp) => {
                     setPswError('Şifre Değiştirildi!')
                 })
             }

@@ -32,7 +32,7 @@ const AdminBlogs = () => {
     formData.append('blog_header', inputs.blog_header)
     formData.append('blog_body', inputs.blog_body)
     try {
-      await Axios.post("http://localhost:3001/api/blog/add", formData)
+      await Axios.post("https://caravinn-test.herokuapp.com/api/blog/add", formData)
     }
     catch (err) {
       console.log(err)
@@ -43,7 +43,7 @@ const AdminBlogs = () => {
   const [blog_list, SetBlog_list] = useState([]);
 
   const getBlog = () => {
-    Axios.get("http://localhost:3001/api/blog/post").then((response) => {
+    Axios.get("https://caravinn-test.herokuapp.com/api/blog/post").then((response) => {
       SetBlog_list(response.data)
     }, [])
   }
@@ -52,7 +52,7 @@ const AdminBlogs = () => {
     getBlog()
   }, [])
   const deleteItem = (id) => {
-    Axios.delete(`http://localhost:3001/api/blog/post-remove/${id}`).then((response) => {
+    Axios.delete(`https://caravinn-test.herokuapp.com/api/blog/post-remove/${id}`).then((response) => {
       console.log(response)
       getBlog()
     })

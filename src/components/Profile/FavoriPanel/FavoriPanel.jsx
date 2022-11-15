@@ -10,7 +10,7 @@ const FavoriPanel = (props) => {
     const [carad, SetCardList] = useState([]);
 
     const getLike = () => {
-        Axios.get(`http://localhost:3001/api/like/${auth.id}`).then((response) => {
+        Axios.get(`https://caravinn-test.herokuapp.com/api/like/${auth.id}`).then((response) => {
             SetCardList(response.data)
         })
     }

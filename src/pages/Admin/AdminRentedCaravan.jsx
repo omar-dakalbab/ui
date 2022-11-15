@@ -7,7 +7,7 @@ const AdminRentedCaravan = () => {
     const [user_list, SetUser_list] = useState([]);
 
     const getUsers = () => {
-        Axios.get("http://localhost:3001/api/caravan/cr").then((response) => {
+        Axios.get("https://caravinn-test.herokuapp.com/api/caravan/cr").then((response) => {
             SetUser_list(response.data)
         }, [])
     }

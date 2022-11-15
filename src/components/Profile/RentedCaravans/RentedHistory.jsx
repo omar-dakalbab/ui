@@ -10,7 +10,7 @@ const RentedHistory = (props) => {
     const [carad, SetCardList] = useState([]);
     const getRentedCaravan = () => {
 
-        Axios.get(`http://localhost:3001/api/caravan/rented-history-id/${currentUser.id}`).then((response) => {
+        Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/rented-history-id/${currentUser.id}`).then((response) => {
             SetCardList(response.data)
         })
 

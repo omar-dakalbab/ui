@@ -9,7 +9,7 @@ const CreditCard = () => {
     const { id } = useParams();
     const { currentUser } = useContext(AuthContext)
     const updateRented = () => {
-        Axios.put(`http://localhost:3001/api/caravan/rented/${id}/${currentUser.id}`, inputs).then((response) => {
+        Axios.put(`https://caravinn-test.herokuapp.com/api/caravan/rented/${id}/${currentUser.id}`, inputs).then((response) => {
             console.log(response.data)
         })
     }

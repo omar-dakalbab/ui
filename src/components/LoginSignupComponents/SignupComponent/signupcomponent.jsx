@@ -65,7 +65,7 @@ const SignupComponent = () => {
     }
     else {
       try {
-        Axios.post("http://localhost:3001/api/auth/register", inputs).then((response) => {
+        Axios.post("https://caravinn-test.herokuapp.com/api/auth/register", inputs).then((response) => {
           errors.push(response.data)
           setErr("Kayıdınız Yapıldı, Giriş yapabilirsiniz")
         }).catch(function (err) {

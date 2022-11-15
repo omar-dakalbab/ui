@@ -13,7 +13,7 @@ const AdvertsPanel = (props) => {
 
   const [carad, SetCardList] = useState([]);
   useEffect(() => {
-    Axios.get(`http://localhost:3001/api/caravan/user-id/${currentUser.id}`).then((response) => {
+    Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/user-id/${currentUser.id}`).then((response) => {
       SetCardList(response.data)
     });
   }, []);

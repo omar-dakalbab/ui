@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 const CaravanUpdate = () => {
     const { id } = useParams()
     const getCaravan = () => {
-        Axios.get(`http://localhost:3001/api/caravan/${id}`).then((resp) => {
+        Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/${id}`).then((resp) => {
             setState({ ...resp.data[0] })
         })
     }
@@ -33,7 +33,7 @@ const CaravanUpdate = () => {
     }
     const handleSubmit = () => {
         Axios
-            .put(`http://localhost:3001/api/caravan/update/${id}`, {
+            .put(`https://caravinn-test.herokuapp.com/api/caravan/update/${id}`, {
                 caravan_title,
                 road,
                 fuel_type,

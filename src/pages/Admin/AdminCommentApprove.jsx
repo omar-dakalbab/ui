@@ -22,7 +22,7 @@ const AdminCommentApprove = () => {
         e.preventDefault()
 
         try {
-            await Axios.post("http://localhost:3001/api/caravan/add", inputs)
+            await Axios.post("https://caravinn-test.herokuapp.com/api/caravan/add", inputs)
         }
         catch (err) {
             console.log(err)
@@ -33,7 +33,7 @@ const AdminCommentApprove = () => {
     const [caravan_list, SetCaravan_list] = useState([]);
 
     const getCaravan = () => {
-        Axios.get("http://localhost:3001/api/comment/get-comments").then((response) => {
+        Axios.get("https://caravinn-test.herokuapp.com/api/comment/get-comments").then((response) => {
             SetCaravan_list(response.data)
         }, [])
     }
@@ -43,14 +43,14 @@ const AdminCommentApprove = () => {
     }, [])
 
     const deleteItem = (id) => {
-        Axios.delete(`http://localhost:3001/api/comment/delete-comment/${id}`).then((response) => {
+        Axios.delete(`https://caravinn-test.herokuapp.com/api/comment/delete-comment/${id}`).then((response) => {
             console.log(response)
             getCaravan()
         })
     }
 
     const approveItem = (id) => {
-        Axios.post(`http://localhost:3001/api/comment/approve-comment/${id}`).then((response) => {
+        Axios.post(`https://caravinn-test.herokuapp.com/api/comment/approve-comment/${id}`).then((response) => {
             console.log(response)
             deleteItem(id)
             getCaravan()

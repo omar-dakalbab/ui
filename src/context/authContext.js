@@ -11,7 +11,7 @@ export const AuthContextProvider = ({ children }) => {
     );
 
     const login = async (inputs) => {
-        const res = await axios.post("http://localhost:3001/api/auth/login", inputs, {
+        const res = await axios.post("https://caravinn-test.herokuapp.com/api/auth/login", inputs, {
             withCredentials: true,
         });
 

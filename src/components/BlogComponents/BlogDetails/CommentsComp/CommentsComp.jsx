@@ -15,10 +15,10 @@ const CommentsComp = () => {
     const [user, setUser] = useState([]);
     const { currentUser } = useContext(AuthContext)
     const getComments = () => {
-        Axios.get(`http://localhost:3001/api/comment/get-comments/${blogId}`).then((resp) => {
+        Axios.get(`https://caravinn-test.herokuapp.com/api/comment/get-comments/${blogId}`).then((resp) => {
             setComment(resp.data)
         })
-        Axios.get(`http://localhost:3001/api/user/${currentUser.id}`).then((resp) => {
+        Axios.get(`https://caravinn-test.herokuapp.com/api/user/${currentUser.id}`).then((resp) => {
             setUser({
                 name: resp.data[0].name
             })

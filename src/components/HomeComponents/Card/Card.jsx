@@ -19,7 +19,7 @@ const Card = (props) => {
                 'Content-Type': 'application/json',
             },
         };
-        Axios.get(`http://localhost:3001/api/like/${id}/${userid}`, config).then((response) => {
+        Axios.get(`https://caravinn-test.herokuapp.com/api/like/${id}/${userid}`, config).then((response) => {
             setLikeData(response.data)
             if (likeData.length > 0) {
                 SetLiked(true)
@@ -31,7 +31,7 @@ const Card = (props) => {
 
     const insertLike = async () => {
         try {
-            await Axios.post(`http://localhost:3001/api/like/likeInsert/${id}/${userid}`).then((response) => {
+            await Axios.post(`https://caravinn-test.herokuapp.com/api/like/likeInsert/${id}/${userid}`).then((response) => {
                 console.log(response)
             })
         }

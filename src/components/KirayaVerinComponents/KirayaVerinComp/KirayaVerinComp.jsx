@@ -33,7 +33,7 @@ const KirayaVerinComp = () => {
         e.preventDefault()
 
         try {
-            await Axios.post(`http://localhost:3001/api/rent/send-requset/${currentUser.id}`, inputs).then((response) => {
+            await Axios.post(`https://caravinn-test.herokuapp.com/api/rent/send-requset/${currentUser.id}`, inputs).then((response) => {
                 console.log(response)
             })
         }

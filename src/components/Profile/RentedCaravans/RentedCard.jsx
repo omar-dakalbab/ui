@@ -11,7 +11,7 @@ import { GiFuelTank } from 'react-icons/gi'
 const RentedCard = (props) => {
     const [carad, SetCardList] = useState([]);
     const getCaravan = () => {
-        Axios.get(`http://localhost:3001/api/caravan/${props.cardid}`).then((response) => {
+        Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/${props.cardid}`).then((response) => {
             SetCardList(response.data);
         })
     }

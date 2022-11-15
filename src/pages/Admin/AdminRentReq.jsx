@@ -9,7 +9,7 @@ const AdminRentReq = () => {
 
 
     const getUsers = () => {
-        Axios.get("http://localhost:3001/api/rent/get-caravan-req").then((response) => {
+        Axios.get("https://caravinn-test.herokuapp.com/api/rent/get-caravan-req").then((response) => {
             SetUser_list(response.data)
         }, [])
     }
@@ -18,14 +18,14 @@ const AdminRentReq = () => {
         getUsers()
     }, [])
     const deleteItem = (id) => {
-        Axios.delete(`http://localhost:3001/api/rent/delete/${id}`).then((response) => {
+        Axios.delete(`https://caravinn-test.herokuapp.com/api/rent/delete/${id}`).then((response) => {
             console.log(response)
             getUsers()
         })
     }
 
     const approveReq = (id) => {
-        Axios.get(`http://localhost:3001/api/rent/approve-request/${id}`).then((response) => {
+        Axios.get(`https://caravinn-test.herokuapp.com/api/rent/approve-request/${id}`).then((response) => {
             console.log(response.data)
             deleteItem(id)
         })
