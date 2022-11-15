@@ -28,12 +28,13 @@ const BlogDetailsWrapper = (props) => {
                 (
                     <>
                         <CommentComp />
-                        <CommentsComp />
+                       
                     </>
                 )
                 :
                 (<LoginFirstComp />)
             }
+             <CommentsComp />
 
             <BlogSuggestions />
         </div>
