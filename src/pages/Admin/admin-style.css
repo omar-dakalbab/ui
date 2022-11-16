@@ -1,0 +1,18 @@
+.admin-panel{
+    display: flex;
+    height: 100%;
+    background-color: #E6F1F6;
+}
+.admin-stats-cards{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 10%;
+}
+.admin-stats-cards .stats-card{
+    background-color: #FFF;
+    border-radius: 15px;
+    padding: 25px;
+    width: 80%;
+    margin: 15px;
+}
