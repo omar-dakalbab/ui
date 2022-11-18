@@ -3,7 +3,7 @@ import Layout from './Layout'
 import './admin-style.css'
 const Admin = () => {
     return (
-        <div className='admin-panel'>
+        <div className='admin-panel' style={{ backgroundColor: '#E6F1F6' }}>
             <Layout text="Main" />
             <div className="admin-page-content">
                 <div className="admin-stats-cards">

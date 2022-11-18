@@ -58,7 +58,7 @@ const AdminBlogs = () => {
     })
   }
   return (
-    <div style={{ display: 'flex', height: '100%' }}>
+    <div className='admin-panel'>
       <Layout />
       <div className="admin-page-content">
         <div className="insert-blog">
