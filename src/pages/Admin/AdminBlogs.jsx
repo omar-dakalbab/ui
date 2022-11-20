@@ -65,7 +65,7 @@ const AdminBlogs = () => {
           <span className='input-data'>
             <label>Blog Fotoğrafı</label>
             <input type="file" name='blog_image' onChange={handleFileChange} />
-            <img style={{width: '200px'}} src={image.preview} alt="" />
+            <img style={{ width: '200px' }} src={image.preview} alt="" />
           </span>
           <span className='input-data'>
             <label>Başlık</label>
@@ -89,9 +89,9 @@ const AdminBlogs = () => {
           <table>
             <tr>
               <th>Blog ID</th>
-              <th>Blog Img</th>
-              <th>Blog Title</th>
-              <th>Blog Header</th>
+              <th>Blog Fotoğrafı</th>
+              <th>Blog Başlığı</th>
+              <th>Blog Başlık 2</th>
               <th>Blog Body</th>
               <th>Date Created</th>
             </tr>
@@ -110,6 +110,7 @@ const AdminBlogs = () => {
                 </tr>
               )
             })}
+
           </table>
         </div>
       </div>
