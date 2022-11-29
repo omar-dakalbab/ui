@@ -50,7 +50,7 @@ const Cards = () => {
                     </button>
                 </div>
                 <div className="right-buttons">
-                    <Link to={'/kiralik-karavanlar/all'}><button className='btn btn-transparent-blue'>Tümünü Gör</button></Link>
+                    <Link to={'/kiralik-karavanlar/all'}><button style={{padding: '10px 40px'}} className='btn btn-transparent-blue'>Tümünü Gör</button></Link>
                 </div>
             </div>
 

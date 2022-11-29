@@ -32,7 +32,7 @@ const CaravansCard = (props) => {
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
             {carad.length === 0 ? (
                 <div style={{ margin: '100px' }}>
-                    <h1>Sounuç bulunmadı...</h1>
+                    <h1>Sonuç bulunmadı...</h1>
                 </div>
             ) : (
                 carad.slice(0, props.limit).map((val, key) => {

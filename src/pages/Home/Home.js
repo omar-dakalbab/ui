@@ -8,14 +8,13 @@ import CaravanKiralaSection from '../../components/HomeComponents/CaravanKiralaS
 import GiveRent from '../../components/HomeComponents/GiveRentSection/GiveRent'
 import Blog from '../../components/HomeComponents/Blog/Blog'
 import Map from '../../components/HomeComponents/Map/Map'
-import Footer from '../../components/Footer/Footer'
 
 const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
 }, [])
   return (
-    <>
+    <div style={{background: '#FFF'}}>
       <Header />
       <div className="wrapper">
         <Cards />
@@ -26,7 +25,7 @@ const Home = () => {
       <GiveRent />
       <Blog />
       <Map />
-    </>
+    </div>
 
 
   )

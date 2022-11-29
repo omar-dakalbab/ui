@@ -3,11 +3,12 @@
 }
 
 .wrapper{
+
     position: relative;
-    z-index: 3;
     padding: 50px 120px;
-    border-radius: 36px 36px 0 0;
-    background-color: #FFF;
+    border-radius: 36px !important;
+    background-color: #fff;
+    width: 100%;
 }
 
 

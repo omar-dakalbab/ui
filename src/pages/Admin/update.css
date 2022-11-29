@@ -1,12 +1,14 @@
 .update-panels input{
-    margin: 15px;
-    color: #FFF;
-    padding: 20px;
-    background-color: rgb(177, 177, 177);
-    border-radius: 30px;
-    width: 400px;
+    padding: 35px;
+    background-color: #FFF;
+    margin: 35px;
+    border-radius: 15px;
+    width: 100%;
 }
-textarea#blog_body{
-    height: 300px;
-    width: 900px;
+.update-panels{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+
+
 }

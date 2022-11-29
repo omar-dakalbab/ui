@@ -49,6 +49,8 @@ const AdminCaravan = () => {
       getCaravan()
     })
   }
+  const [search, setSearch] = useState("");
+  const [filterData, setFilterData] = useState("")
   return (
     <div className='admin-panel'>
       <Layout />
@@ -85,7 +87,19 @@ const AdminCaravan = () => {
         <br />
 
         <div className="table">
-
+          <div style={{ display: 'flex' }}>
+            <input type="text" placeholder='search' onChange={(e) => setSearch(e.target.value)} />
+            <select id='select-filter' onChange={(e) => setFilterData(e.target.value)}>
+              <option value="id">ID</option>
+              <option value="caravan_title">caravan_title</option>
+              <option value="road">road</option>
+              <option value="fuel_type">fuel_type</option>
+              <option value="caravan_type">caravan_type</option>
+              <option value="price">price</option>
+              <option value="location">location</option>
+              <option value="rented">rented</option>
+            </select>
+          </div>  
           <table>
             <tr>
               <th>Caravan ID</th>
@@ -97,7 +111,43 @@ const AdminCaravan = () => {
               <th>Location</th>
               <th>Rented</th>
             </tr>
-            {caravan_list.map((val, key) => {
+            {caravan_list.filter((val) => {
+              if (filterData === 'caravan_title') {
+                return search.toLowerCase() === '' ? val : val.caravan_title.toLowerCase()
+                  .includes(search)
+              }
+              if (filterData === 'road') {
+                return search.toLowerCase() === '' ? val : val.road.toLowerCase()
+                  .includes(search)
+              }
+              if (filterData === 'fuel_type') {
+                return search.toLowerCase() === '' ? val : val.fuel_type.toLowerCase()
+                  .includes(search)
+              }
+              if (filterData === 'caravan_type') {
+                return search.toLowerCase() === '' ? val : val.caravan_type.toLowerCase()
+                  .includes(search)
+              }
+              if (filterData === 'price') {
+                return search.toLowerCase() === '' ? val : val.price.toLowerCase()
+                  .includes(search)
+              }
+              if (filterData === 'location') {
+                return search.toLowerCase() === '' ? val : val.location.toLowerCase()
+                  .includes(search)
+              }
+              if (filterData === 'rented') {
+                return search.toLowerCase() === '' ? val : val.rented.toLowerCase()
+                  .includes(search)
+              }
+              if (filterData === 'id') {
+                return search === '' ? val : val.id.toString()
+                  .includes(search)
+              }
+              else {
+                return search === '' ? val : val
+              }
+            }).map((val, key) => {
               return (
                 <tr key={key}>
                   <td>{val.id}</td>
@@ -108,7 +158,7 @@ const AdminCaravan = () => {
                   <td>{val.price}</td>
                   <td>{val.location}</td>
                   <td>{val.rented}</td>
-                  <Link to={`update/${val.id}`}><button style={{margin: 10, padding: 15 }}>Düzenle</button></Link>
+                  <Link to={`update/${val.id}`}><button style={{ margin: 10, padding: 15 }}>Düzenle</button></Link>
                   <button onClick={() => deleteItem(val.id)} style={{ margin: 10, padding: 15 }}>Sil</button>
                 </tr>
               )

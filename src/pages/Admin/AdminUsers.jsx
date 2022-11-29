@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Layout from './Layout'
 import './layout.css'
 import Axios from 'axios'
@@ -21,13 +21,25 @@ const AdminUsers = () => {
       getUsers()
     })
   }
-
+  const [search, setSearch] = useState("");
+  const [filterData, setFilterData] = useState("")
   return (
     <div className='admin-panel'>
       <Layout />
       <div className="admin-page-content">
         <div className="table">
+          <div style={{ display: 'flex' }}>
+            <input type="text" placeholder='search' onChange={(e) => setSearch(e.target.value)} />
+            <select id='select-filter' onChange={(e) => setFilterData(e.target.value)}>
+              <option value="id">ID</option>
+              <option value="email">Email</option>
+              <option value="name">Name</option>
+              <option value="phone_number">Phone Number</option>
+              <option value="location">Location</option>
+            </select>
+          </div>
           <table>
+
             <tr>
               <th>Kullanıcı ID</th>
               <th>Email</th>
@@ -37,7 +49,31 @@ const AdminUsers = () => {
               <th>Doğum Tarihi</th>
               <th>Date created</th>
             </tr>
-            {user_list.map((val, key) => {
+            {user_list.filter((val) => {
+              if (filterData === 'email') {
+                return search.toLowerCase() === '' ? val : val.email.toLowerCase()
+                  .includes(search)
+              }
+              if (filterData === 'name') {
+                return search.toLowerCase() === '' ? val : val.name.toLowerCase()
+                  .includes(search)
+              }
+              if (filterData === 'phone_number') {
+                return search.toLowerCase() === '' ? val : val.phone_number.toLowerCase()
+                  .includes(search)
+              }
+              if (filterData === 'location') {
+                return search.toLowerCase() === '' ? val : val.location.toLowerCase()
+                  .includes(search)
+              }
+              if (filterData === 'id') {
+                return search === '' ? val : val.id.toString()
+                  .includes(search)
+              }
+              else {
+                return search === '' ? val : val
+              }
+            }).map((val, key) => {
               return (
                 <tr key={key} >
                   <td>{val.id}</td>

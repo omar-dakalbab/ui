@@ -45,7 +45,6 @@ import AdminComments from './pages/Admin/AdminComments'
 import AdminRentedCaravan from './pages/Admin/AdminRentedCaravan'
 import RentedHistory from './pages/Profile/RentedHistory'
 import NavbarWhite from './components/NavBar/NavbarWhite'
-import PageNotFound from './pages/PageNotFound/PageNotFound'
 
 const App = () => {
 
@@ -81,7 +80,7 @@ const App = () => {
     return (
       <div>
         <ProtectedRoute>
-          <NavbarWhite />
+          <NavbarWhite/>
           <Outlet />
         </ProtectedRoute>
       </div>
@@ -253,10 +252,6 @@ const App = () => {
       path: "/sign-up",
       element: <Signup />
     },
-    {
-      path: "*",
-      element: <PageNotFound />
-    }
   ])
 
   return (

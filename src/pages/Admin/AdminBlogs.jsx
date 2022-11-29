@@ -57,6 +57,9 @@ const AdminBlogs = () => {
       getBlog()
     })
   }
+
+  const [search, setSearch] = useState("");
+  const [filterData, setFilterData] = useState("")
   return (
     <div className='admin-panel'>
       <Layout />
@@ -85,7 +88,15 @@ const AdminBlogs = () => {
         <br />
 
         <div className="table">
-
+          <div style={{ display: 'flex' }}>
+            <input type="text" placeholder='search' onChange={(e) => setSearch(e.target.value)} />
+            <select id='select-filter' onChange={(e) => setFilterData(e.target.value)}>
+              <option value="id">Blog ID</option>
+              <option value="blog_title">Blog Başlığı</option>
+              <option value="blog_header">Blog Başlığı 2</option>
+              <option value="blog_body">Blog Body</option>
+            </select>
+          </div>
           <table>
             <tr>
               <th>Blog ID</th>
@@ -95,7 +106,27 @@ const AdminBlogs = () => {
               <th>Blog Body</th>
               <th>Date Created</th>
             </tr>
-            {blog_list.map((val, key) => {
+            {blog_list.filter((val) => {
+              if (filterData === 'blog_title') {
+                return search.toLowerCase() === '' ? val : val.blog_title.toLowerCase()
+                  .includes(search)
+              }
+              if (filterData === 'blog_header') {
+                return search.toLowerCase() === '' ? val : val.blog_header.toLowerCase()
+                  .includes(search)
+              }
+              if (filterData === 'blog_body') {
+                return search.toLowerCase() === '' ? val : val.blog_body.toLowerCase()
+                  .includes(search)
+              }
+              if (filterData === 'id') {
+                return search === '' ? val : val.id.toString()
+                  .includes(search)
+              }
+              else{
+                 return search === '' ? val : val
+              }
+            }).map((val, key) => {
               return (
                 <tr key={key}>
                   <td>{val.id}</td>
@@ -110,7 +141,7 @@ const AdminBlogs = () => {
                 </tr>
               )
             })}
-
+           
           </table>
         </div>
       </div>

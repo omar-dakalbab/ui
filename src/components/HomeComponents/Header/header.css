@@ -1,5 +1,7 @@
 .home-header{
     background: no-repeat linear-gradient(180.3deg, #006E9D 0.26%, #BBEBFF 79%);
+    height: 600px;
+    position: relative;
 }
 
 .title-sec{
@@ -30,7 +32,7 @@ img.title-sec-bg{
     padding:0 80px;
     width: 100%;
     position: absolute;
-    bottom: -15px;
+    bottom: -5px;
 }
 .button3, .button4{
     width: 230px;
@@ -71,6 +73,7 @@ img.title-sec-bg{
 .searchBar input{
     background-color: #FFF;
     border: none;
+    font-size: 16px;
     outline: none;
 }
 input#mainInput{

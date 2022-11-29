@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import './buttons.css'
-import Button from '../../Button/Button'
 const Buttons = () => {
     const [buttonColors, setButtonColors] = useState({
         color1: "btn btn-blue",

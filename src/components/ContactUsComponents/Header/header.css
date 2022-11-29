@@ -1,5 +1,5 @@
 .contact-us-header{
-    background-image:url('./bg.svg');
+    background-image:url('./bg.png');
     background-repeat:no-repeat;
     background-size:contain;
     background-position:center;
@@ -8,6 +8,7 @@
     align-items: center;
     height: 100vh;
     text-align: center;
+    padding: 0px 10%;
 }
 .contact-us-header .title{
     margin-top: 12vh;
