@@ -41,3 +41,11 @@
 .value-card p{
     max-width: 200px;
 }
+@media only screen and (max-width: 800px) {
+    .our-values{
+        padding: 20px;
+    }
+    .value-cards{
+        flex-direction: column;
+    }
+}

@@ -17,3 +17,16 @@ img.blue-section-img{
     color: #FFF;
 }
 
+@media only screen and (max-width: 600px) {
+    .blue-section{
+        padding: 50px;
+    }
+    .blue-section .flex{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .blue-section .flex .flex-1, .blue-section .flex .flex-2{
+        text-align: center;
+    }
+}

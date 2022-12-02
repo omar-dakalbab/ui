@@ -58,3 +58,46 @@ img.information-hand-img{
     width: 100%;
 }
 
+  
+@media only screen and (max-width: 600px) {
+    .information-section .flex{
+        flex-direction: column-reverse;
+        padding-top: 20px !important; 
+        padding: 0;
+        height: 100%;
+        background-color: #0B91C5;
+        align-items: center;
+        justify-content: center;
+    }
+    .information-section .flex .flex-2{
+        text-align: center;
+    }
+    .information-section .flex .flex-2 img{
+        width: 50%;
+    }
+    .information-section .flex .flex-1 h1{
+        font-size: 4vw;
+        text-align: center;
+        margin-top: 15px;
+    }
+    .information-section .flex .flex-1 .item .text p{
+        font-size: 3vw;
+    }
+    .information-section .flex .flex-1{
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100%;
+    }
+    .information-section .flex .flex-1 .item{
+        margin: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        justify-content: space-around;
+        padding: 0 30px;
+    }
+    button.ed{
+        font-size: 4vw;
+        margin-left: 30%;
+        margin-bottom: 5%;
+    }
+}

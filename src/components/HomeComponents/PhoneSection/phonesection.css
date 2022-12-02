@@ -94,3 +94,33 @@ img#mockup{
     right: 10%;
     z-index: 2;
 }
+
+@media only screen and (max-width: 800px) {
+    .phoneSection .content .left-menu ul li{
+        font-size: .7rem !important;
+        margin: 5px;
+    }
+    .phoneSection .content{
+        width: 100%;
+        padding: 30px 0;
+        flex-direction: column;
+        text-align: center;
+    }
+    .phoneSection .content .left-menu ul{
+        flex-direction: column;
+        margin: 0;
+    }
+    .left-menu h1, p{
+        width: 100% !important;
+    }
+    .left-menu p{
+        padding: 0px 5%;
+    }
+    .phoneSection .content .left-menu h1{
+       font-size: 4vw !important;
+    }
+    .phoneSection .right-menu{
+        margin-top: 35px;
+        width: 50%;
+    }
+}

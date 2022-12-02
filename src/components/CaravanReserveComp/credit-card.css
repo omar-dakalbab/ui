@@ -41,3 +41,18 @@ button#odeme-btn{
     background: linear-gradient(94.76deg, #117AA7 9.47%, #0DA2C9 73.37%);
     border-radius: 60px;
 }
+@media only screen and (max-width: 800px) {
+    .payment-inputs{
+        padding: 0 10px;
+        width: 100%;
+    }
+    .success-message{
+        margin: 0;
+        margin-top: 35px;
+        margin-left: 40px;
+        width: 80%;
+    }
+    .success-message p{
+        text-align: center;
+    }
+}

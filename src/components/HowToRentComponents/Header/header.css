@@ -34,3 +34,26 @@ img.headerbg{
 }
 
   
+@media only screen and (max-width: 600px) {
+    .header-content{
+        padding-top: 50px !important;
+        padding: 0;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .header-content .header-left h1{
+        font-size: 5vw;
+    }
+    .header-right span:nth-child(2n-1){
+        font-size: 2vw;
+    }
+    .header-right span:nth-child(2n){
+        font-size: 3vw;
+    }
+    .header-right span{
+        margin: 5;
+    }
+    img.headerbg{
+        display: none;
+    }
+}

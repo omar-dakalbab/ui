@@ -67,3 +67,22 @@
     color: #3D434C;
 }
 
+@media only screen and (max-width: 800px) {
+   .giveRent .content h1{
+    font-size: 5vw;
+    width: 100% !important;
+    text-align: center;
+   }
+   .giveRent .content{
+    flex-direction: column !important;
+   }
+   .giveRent .content .left-menu .text p{
+    font-size: 3vw;
+   }
+   .giveRent .content .buttons button{
+    font-size: 3vw
+   }
+   .giveRent .content .buttons{
+    margin-bottom: 35px;
+   }
+}

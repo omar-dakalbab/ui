@@ -23,3 +23,8 @@
     position: absolute;
     width: 100%;
 }
+@media only screen and (max-width: 600px) {
+    .blog-main-page-content h1 span{
+        font-size: 7vw;
+    }
+}

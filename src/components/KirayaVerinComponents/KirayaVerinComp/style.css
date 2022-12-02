@@ -96,3 +96,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: #117AA7 !important;
     color: #FFF;
 }
+
+@media only screen and (max-width: 800px){
+    .kiraya-verin-comp{
+        padding: 0;
+        flex-direction: column-reverse;
+    }
+    .kiraya-verin-left{
+        padding: 25px 35px;
+        margin: 0;
+    }
+}

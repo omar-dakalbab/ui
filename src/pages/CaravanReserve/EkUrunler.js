@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react'
-import Navbar from '../../components/NavBar/NavbarWhite'
 import EkUrunlerComp from '../../components/CaravanReserveComp/EkUrunlerComp'
-
+import Footer from '../../components/Footer/Footer'
 const EkUrunler = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -10,6 +9,7 @@ const EkUrunler = () => {
         <div>
           
             <EkUrunlerComp />
+            <Footer/>
         </div>
     )
 }

@@ -26,3 +26,11 @@
 .our-team-card img{
     margin-bottom: 20px;
 }
+@media only screen and (max-width: 800px) {
+    .our-team-cards{
+        flex-direction: column;
+    }
+    .our-team-card{
+        margin-bottom: 20px;
+    }
+}

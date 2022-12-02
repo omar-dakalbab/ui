@@ -19,3 +19,10 @@
     margin-bottom: 60px;
     padding-top: 70px;
 }
+@media only screen and (max-width: 800px) {
+    .map{
+        padding: 0;
+        justify-content: flex-start;
+        height: 350px;
+    }
+} 

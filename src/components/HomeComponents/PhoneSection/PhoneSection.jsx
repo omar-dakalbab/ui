@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import './phonesection.css'
 import Background from './assets/background.svg'
 import Phone from './assets/phone.svg'
@@ -16,23 +16,34 @@ const PhoneSection = () => {
   return (
     <div className='phoneSection' style={{ position: 'relative' }}>
       <img src={leftPlant} className="leftPlant" id='img' alt='left-vector-plant' />
-      <img src={rightPlant} className="rightPlant" id='img' alt='right-vector-plant'/>
+      <img src={rightPlant} className="rightPlant" id='img' alt='right-vector-plant' />
       <img src={Background} width='100%' id='img' alt='background-img' />
       <div className="content">
-        <div data-aos-duration="1600" data-aos-delay="50" data-aos="fade-right" className="left-menu">
+        <div
+          data-aos-duration="1600"
+          data-aos-delay="50"
+          data-aos="fade-right"
+          className="left-menu">
           <ul>
             <li >Kayıt Ol</li>
             <li className='active'>Karavanı Seç</li>
             <li>Kullanmaya Başla</li>
             <li>Kiralamayı Bitir</li>
           </ul>
-          <h1 style={{ color: '#2689B2' }}>Karavanı Seç</h1>
+          <br />
+          <h1 style={{ color: '#2689B2'}}>Karavanı Seç</h1>
           <h1 style={{ color: '#196CA5' }}>Kiralamaya Başla</h1>
           <p>Sana en yakın karavanlar arasından ihtiyacına uygun karavanı
             seçerek kiralamasını hemen başlatabilirsin.</p>
+          <br />
         </div>
-        <div data-aos-duration="1600" data-aos-delay="50" data-aos="fade-left" className="right-menu">
-          <img src={Phone} alt="phone" className='phone'/>
+        <div
+          data-aos-duration="1600"
+          data-aos-delay="50"
+          data-aos="fade-left"
+          className="right-menu"
+        >
+          <img src={Phone} alt="phone" className='phone' />
           <img src={leftArrow} alt="leftArrow" className='leftArrow' />
           <img src={rightArrow} alt="rightArrow" className='rightArrow' />
         </div>

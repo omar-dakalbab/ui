@@ -79,5 +79,28 @@ img.caravan{
 img.cloud{
     display: none;
 }
- 
+ .group .text{
+    text-align: center;
+ }
+
+ .group .text h1#title-1{
+    font-size: 6vw;
+ }
+ .group .text h1#title-2{
+    font-size: 3.5vw;
+ }
+ .group .text p{
+    font-size: 2vw;
+    padding: 2% 15%;
+ }
+}
+
+@media only screen and (max-width: 800px) {
+    .group .text p{
+        font-size: 2vw;
+        padding: 2% 25%;
+    }
+    .main .background{
+        display: none !important;
+    }
 }

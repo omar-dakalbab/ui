@@ -127,3 +127,24 @@ span#number{
     color: #FFF;
     font-weight: 500;
 }
+
+@media only screen and (max-width: 800px) {
+    .urun-cards{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .ek-urunler-content{
+        padding: 0;
+    }
+    .ek-urunler-comp img{
+        margin-top: 85px;
+    }
+    button#geri{
+        margin-top: 10;
+        margin-left: 10;
+        margin: 0 !important;
+    }
+    .urun-card{
+        flex-direction: column;
+    }
+}

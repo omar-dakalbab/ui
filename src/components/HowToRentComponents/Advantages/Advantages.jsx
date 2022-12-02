@@ -19,7 +19,7 @@ const Advantages = () => {
                             de bütçenize ve kişisel tercihinize uygun karavanı seçmek olacaktır.</p>
                     </div>
                 </div>
-                <div className="flex">
+                <div className="flex mb">
                     <div className="flex-2">
                         <p>Karavanla seyahat etme kararını alır almaz yapmanız gerek ilk şeylerden biri
                             de bütçenize ve kişisel tercihinize uygun karavanı seçmek olacaktır.</p>

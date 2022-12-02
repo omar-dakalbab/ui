@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import FAQ from '../../components/FaqComponents/FAQ/FAQ'
 import Navbar from '../../components/NavBar/Navbar'
-import Footer from '../../components/Footer/Footer'
+
 import './FaqPage.css'
 const Questions = () => {
     useEffect(() => {

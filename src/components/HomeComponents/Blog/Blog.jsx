@@ -12,7 +12,12 @@ const Blog = () => {
         AOS.init();
     }, [])
     return (
-        <div data-aos-duration="2500" data-aos-delay="50" data-aos="fade-down" className='blog'>
+        <div
+            data-aos-duration="2500"
+            data-aos-delay="50"
+            data-aos="fade-down"
+            className='blog'
+        >
             <h1>Caravınn</h1>
             <h1>Blog</h1>
 

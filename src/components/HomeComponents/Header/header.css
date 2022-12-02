@@ -73,7 +73,7 @@ img.title-sec-bg{
 .searchBar input{
     background-color: #FFF;
     border: none;
-    font-size: 16px;
+    font-size: 0.8vw;
     outline: none;
 }
 input#mainInput{
@@ -99,6 +99,7 @@ input#mainInput{
     display: flex;
     align-items: center;
     margin-left: 20px;
+
 }
 .dateInput img{
     margin-right: 15px;
@@ -109,6 +110,10 @@ button{
 .vinn{
     margin-left: 15px;
 }
+.vinn button{
+    height: 65px;
+    margin-right: 5px !important;
+}
 
 span#line{
     border: 1px solid #F0F0F0;
@@ -117,3 +122,42 @@ span#line{
 }
 
 
+@media only screen and (max-width: 1000px) {
+    
+ .home-header .title-sec .te h1{
+    font-size: 6vw;
+ }
+.title-sec{
+    padding: 7rem 0;
+}
+ .title-sec .buttons button{
+    font-size: 1.9vw;
+ }
+ .vinn{
+    margin-left: 5px;
+}
+ .vinn button{
+    height: 49px;
+    padding: 0 20px;
+    font-size: 3vw;
+    margin-right: 0px !important;
+}
+ .searchBar{ 
+    padding-left: 25px;
+    width: 90%;
+    height: 50px;
+ }
+ .dateInput img{
+    width: 15% !important;
+    margin: 0;
+ }
+ .dateInput{
+    margin-left: 10px;
+ }
+ .dateInput input, input#mainInput{
+    font-size: 1.5vw;
+ }
+ img.title-sec-bg{
+    display: none;
+ }
+} 

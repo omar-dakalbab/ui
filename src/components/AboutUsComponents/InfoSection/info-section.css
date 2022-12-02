@@ -25,3 +25,14 @@
     justify-content: space-around;
     padding: 0 10%;
 }
+
+@media only screen and (max-width: 800px) {
+    .info-section-2-main, .info-section-main{
+        flex-direction: column;
+        height: 500px;
+        margin-top: 200px;
+    }
+    .info-section-text h2{
+        font-size: 5vw;
+    }
+}

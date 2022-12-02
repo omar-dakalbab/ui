@@ -30,3 +30,18 @@
     display: flex;
 }
 
+.hamburger-menu{
+    display: none;
+}
+@media only screen and (max-width: 800px) {
+    .left-menu-white ul{
+        display: none;
+    }
+    .right-menu-white .after-logged,.right-menu-white .before-logged{
+        display: none;
+    }
+    .hamburger-menu{
+        display: block;
+    }
+    
+}

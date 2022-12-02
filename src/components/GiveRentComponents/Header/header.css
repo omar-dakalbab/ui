@@ -49,3 +49,8 @@
     color: #666666;
 } 
 
+@media only screen and (max-width: 600px) {
+    .give-rent-header{
+        flex-direction: column-reverse;
+    }
+}

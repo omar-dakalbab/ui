@@ -16,7 +16,8 @@ const CaravansCard = (props) => {
     const [carad, SetCardList] = useState([]);
     useEffect(() => {
         if (location) {
-            Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/by-location/${props.request}`).then((response) => {
+       
+           Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/by-location/${props.request}`).then((response) => {
                 SetCardList(response.data)
             });
         }

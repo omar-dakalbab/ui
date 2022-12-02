@@ -14,3 +14,15 @@
     font-size: 3vw;
     color: #FFF;
 }
+
+@media only screen and (max-width: 800px) {
+    .caravans-header h1{
+        font-size: 7vw;
+        color: #FFF;
+    }
+    .caravans-header{
+        height: 50vh;
+        padding-bottom: 0;
+    }
+    
+}

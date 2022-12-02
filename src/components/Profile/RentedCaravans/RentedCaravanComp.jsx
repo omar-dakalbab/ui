@@ -24,7 +24,7 @@ const RentedCaravanComp = (props) => {
   }, [])
 
   return (
-    <div className='rented-caravan'>
+    <div className='rented-caravan '>
       <LeftMenu />
       <div className="rented-caravan-content">
 

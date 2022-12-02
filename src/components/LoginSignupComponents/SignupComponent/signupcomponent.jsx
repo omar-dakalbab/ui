@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Axios from 'axios'
 import './signupcomponent.css'
 
@@ -47,14 +47,14 @@ const SignupComponent = () => {
 
     return errors;
   }
-  const nav = useNavigate()
+
 
 
   const [errMessage, setErr] = useState(null)
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
-  const delay = ms => new Promise(res => setTimeout(res, ms));
+
   const handleClick = (e) => {
 
     e.preventDefault()
@@ -91,7 +91,7 @@ const SignupComponent = () => {
         <p>Hesabınız dakikalar içinde açın karavan kiralayın <br /> veya karavanınızı kiraya verin</p>
       </div>
       <div className="login-card">
-        <span style={{ textAlign: 'center', marginBottom: '10px'}}>{errMessage && errMessage}</span>
+        <span style={{ textAlign: 'center', marginBottom: '10px' }}>{errMessage && errMessage}</span>
         <input type="text" placeholder='Adınzı'
           name='name'
           onChange={handleChange}

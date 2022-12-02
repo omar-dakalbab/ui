@@ -28,6 +28,37 @@ button.btn-left,button.btn-right{
     align-items: center;
 }
 .buttons-2 .left-buttons button{
-
     border-radius: 30px;
+}
+
+@media only screen and (max-width: 800px) {
+    .buttons-2{
+        padding: 0;
+        align-items: flex-start; 
+    }
+    .buttons-2 .left-buttons{
+        flex-direction: column;
+    }
+    .buttons-2 .left-buttons button{
+        font-size: .4rem;
+        margin-bottom: 5px !important;
+        width: 100%;
+    }
+    .buttons-2 .right-buttons button{
+        font-size: .4rem;
+        padding: 5px 20px !important;
+    }
+    .left-buttons button, .right-buttons button{
+        margin: 0 !important;
+    }
+}
+
+
+body, html {
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+   
+    overflow-x: hidden;
+    overflow-y: auto;
 }

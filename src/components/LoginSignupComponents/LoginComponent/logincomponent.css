@@ -55,4 +55,15 @@
     font-weight: 600;                   
 }
 
-         
+@media only screen and (max-width: 800px) {
+    .login-component .login-title h1{
+        font-size: 5vw
+    }
+    .login-component .login-title p{
+        font-size: 3vw;
+    }
+    .login-card{
+        width: 80%;
+        
+    }
+}

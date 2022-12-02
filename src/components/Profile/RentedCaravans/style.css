@@ -71,3 +71,10 @@ button#button-2{
     color: #196CA5;
     background-color: transparent;
 }
+
+
+@media only screen and (max-width: 800px) {
+    .rent-content, .caravan-details{margin: 0 !important; text-align: left !important;}
+    .rented-caravan-card{width: 80%; margin: 0;}
+    .rent-content .caravan-details, .rent-content .rented-date{flex-direction: column;}
+}

@@ -54,3 +54,42 @@ span#circle{
     margin-top: 15px;
     margin-right: 0;
 }
+
+@media only screen and (max-width: 800px) {
+    .karavanKirala .content{
+        width: 100% !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        padding-top: 120px;
+        padding-bottom: 30px;
+    }
+    .karavanKirala .content .left-menu, .karavanKirala .content .right-menu{
+        align-items: center;
+        justify-content: center;
+    }
+    .karavanKirala .content .left-menu img#mockup{
+        width: 50% !important;
+    }
+    .karavanKirala .content .right-menu h1{
+        text-align: center;
+        font-size: 5vw;
+        margin-top: 25px;
+    }
+    .karavanKirala .content .right-menu .item .text h3{
+        font-size: 4.4vw;
+    }
+    .karavanKirala .content .right-menu .item .text p{
+        font-size: 3vw;
+        width: 75% !important;
+    }
+    .karavanKirala .content .right-menu .item{
+        margin: 25px !important;
+    }
+    .karavanKirala .content .right-menu button{
+        margin: 0 !important;
+        font-size: 3.5vw;
+        padding: 5px 30px;
+    }
+}

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import CaravanReserveComp from '../../components/CaravanReserveComp/CaravanReserveComp'
-
+import Footer from '../../components/Footer/Footer'
 
 const CaravanReserve = () => {
     useEffect(() => {
@@ -9,6 +9,7 @@ const CaravanReserve = () => {
     return (
         <div>
             <CaravanReserveComp />
+            <Footer/>
         </div>
     )
 }

@@ -22,7 +22,7 @@ const CaravanReserveComp = () => {
   const [caravan, SetCaravan] = useState([]);
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
-  const [err, SetErr] = useState();
+  // const [err, SetErr] = useState();
   const [inputs, setInputs] = useState({
     description: "",
     startDate: "",
@@ -67,7 +67,7 @@ const CaravanReserveComp = () => {
         <span id='title'>Karavanınızı</span>
         <h1>Kiralıyorsunuz</h1>
         <p>Hangi günler Kullanıcaksınız?</p>
-        <p>{err && err}</p>
+    
         <div className='date-calendar'>
           <DateRange
             editableDateInputs={true}

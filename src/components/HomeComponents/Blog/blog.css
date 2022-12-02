@@ -25,5 +25,15 @@
     align-items: center;
     justify-content: center;
 }
+@media only screen and (max-width: 800px) {
+    .blog{
+        margin-top: 100px;
+        height: 1600px;
+        padding: 0;
+    }
+    .blog-cards{
+        flex-direction: column;
+    }
+} 
 
 

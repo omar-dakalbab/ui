@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import BlogMainPage from '../../components/BlogComponents/BlogMainPage/BlogMainPage'
 import NavBar from '../../components/NavBar/NavbarWhite'
-import Footer from '../../components/Footer/Footer'
+
 const Blog = () => {
     useEffect(() => {
         window.scrollTo(0, 0)

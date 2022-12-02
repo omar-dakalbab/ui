@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react'
 import Banner from '../../components/ContactUsComponents/Banner/Banner'
 import Header from '../../components/ContactUsComponents/Header/Header'
-import Footer from '../../components/Footer/Footer'
 import NavBar from '../../components/NavBar/NavbarWhite'
 const ContactUs = () => {
   useEffect(() => {

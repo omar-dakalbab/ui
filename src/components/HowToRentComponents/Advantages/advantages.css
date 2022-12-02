@@ -40,3 +40,28 @@
 
 
 
+@media only screen and (max-width: 600px) {
+    .advantages{
+        padding: 0;
+        height: 1100px;
+        flex-direction: column;
+        margin: 0;
+    }
+    .advantages-img-header{
+        flex-direction: column;
+        margin: 0;
+    }
+    .advantages-img-header img{
+        width: 50%;
+        margin-bottom: 25px;
+    }
+    .advantages-img-header h1{
+        font-size: 6vw;
+        line-height: 35px;
+    }
+    
+
+    .mb{
+        display: none;
+    }
+}

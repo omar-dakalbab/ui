@@ -5,7 +5,6 @@ import bg from './bg.svg'
 
 
 const Header = () => {
-  
 
     return (
         <div className="caravans-header">

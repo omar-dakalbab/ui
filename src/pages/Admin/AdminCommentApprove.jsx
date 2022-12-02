@@ -5,30 +5,30 @@ import Axios from 'axios'
 import moment from 'moment'
 
 const AdminCommentApprove = () => {
-    const [inputs, setInputs] = useState({
-        comment_id: "",
-        comment: "",
-        blog_id: "",
-        user_id: "",
-        rate: "",
-        date_created: "",
-    })
+    // const [inputs, setInputs] = useState({
+    //     comment_id: "",
+    //     comment: "",
+    //     blog_id: "",
+    //     user_id: "",
+    //     rate: "",
+    //     date_created: "",
+    // })
 
-    const handleChange = (e) => {
-        setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-    };
+    // const handleChange = (e) => {
+    //     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    // };
 
-    const handleInsert = async e => {
-        e.preventDefault()
+    // const handleInsert = async e => {
+    //     e.preventDefault()
 
-        try {
-            await Axios.post("https://caravinn-test.herokuapp.com/api/caravan/add", inputs)
-        }
-        catch (err) {
-            console.log(err)
-        }
-        getCaravan()
-    }
+    //     try {
+    //         await Axios.post("https://caravinn-test.herokuapp.com/api/caravan/add", inputs)
+    //     }
+    //     catch (err) {
+    //         console.log(err)
+    //     }
+    //     getCaravan()
+    // }
 
     const [caravan_list, SetCaravan_list] = useState([]);
 

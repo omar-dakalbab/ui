@@ -20,5 +20,16 @@
     margin-bottom: 55px;
 }
 
-
+@media only screen and (max-width: 800px) {
+    .signup-component .signup-title h1{
+        font-size: 5vw
+    }
+    .signup-component .signup-title p{
+        font-size: 3vw;
+    }
+    .login-card{
+        width: 80%;
+        
+    }
+}
          

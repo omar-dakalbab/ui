@@ -78,3 +78,10 @@
 .card-2 img, .card-1 img{
     margin: 50px;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .features-cards{
+        display: none;
+    }
+}

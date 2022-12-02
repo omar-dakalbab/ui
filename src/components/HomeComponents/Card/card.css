@@ -7,7 +7,7 @@
     margin: 8px;
 }
 .card img{
-    margin: 7px;
+   margin: 7px;
 }
 .card h3{
     padding: 20px;
@@ -58,4 +58,10 @@ span#line-hr{
     top: 25px;
     right: 29px;
     color: red;
+}
+@media only screen and (max-width: 800px) {
+
+    .card img{
+        margin: 0px;
+    }
 }

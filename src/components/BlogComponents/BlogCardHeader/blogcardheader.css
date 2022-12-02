@@ -36,3 +36,16 @@
     cursor:auto;
     background-color: #FFF;
 }
+@media only screen and (max-width: 600px) {
+    .blog-main-page-card-header{
+        padding: 0 5%;
+    }
+    .blog-card-header h3{
+        bottom: 15px;
+        left: 5px;
+        font-size: 2vw;
+    }
+    .circles{
+        display: none;
+    }
+}

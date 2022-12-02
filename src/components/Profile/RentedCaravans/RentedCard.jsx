@@ -19,7 +19,7 @@ const RentedCard = (props) => {
         getCaravan()
     }, [])
     return (
-        <div className="rented-caravan-card">
+        <div className="rented-caravan-card profile-panel">
             {carad === [] ? (
                 <h1>Loading...</h1>
             ) : (

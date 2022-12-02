@@ -7,7 +7,7 @@ const Header = () => {
         <div className='give-rent-header'>
             <div className="flex-1">
                 <div className="text-1">
-                    <h1>Karavanımı nasıl <br />Kiraya Veririm?</h1>
+                    <h1>Karavanımı nasıl Kiraya Veririm?</h1>
                     <h3>Caravınn ile Karavan Partnerliği</h3>
                 </div>
                 <div className="text-2">

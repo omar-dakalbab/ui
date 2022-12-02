@@ -33,7 +33,7 @@ const InformationSection = () => {
                         </div>
                     </div>
                     <br />
-                    <Link to={'/kiralik-karavanlar'}> <Button text="Hemen Kirala" className="btn btn-transparent ed" /></Link>
+                    <Link to={'/kiralik-karavanlar'}> <button className="btn btn-transparent ed">Hemen Kirala</button></Link>
                 </div>
                 <div className="flex-2">
                     <img className='information-hand-img' src={hand} alt="" />

@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import level3 from '../../components/CaravanReserveComp/level3.svg'
 import success from '../../components/CaravanReserveComp/complete.png'
-import Navbar from '../../components/NavBar/NavbarWhite'
+import Footer from '../../components/Footer/Footer'
 const Completed = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -16,12 +16,15 @@ const Completed = () => {
                 <img src={success} alt="" />
                 <h1>TEBRİKLER!</h1>
                 <p>Tebrikler Maceraya Vınn'lamaya Hazırsınız...</p>
-                <button>
-                    <NavLink style={{color: '#FFF'}} to='/kiralik-karavanlar/all'>
+                <NavLink style={{ color: '#FFF' }} to='/kiralik-karavanlar/all'>
+                    <button style={{width: '100%'}}>
+
                         Karavanlarıma Git
-                    </NavLink>
-                </button>
+
+                    </button>
+                </NavLink>
             </div>
+            <Footer />
         </>
     )
 }

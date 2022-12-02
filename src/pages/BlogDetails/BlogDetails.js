@@ -4,7 +4,7 @@ import BlogDetailsWrapper from '../../components/BlogComponents/BlogDetails/Blog
 import NavBar from '../../components/NavBar/Navbar'
 import { useParams } from 'react-router-dom';
 import Axios from 'axios'
-import moment from 'moment'
+
 const BlogDetails = () => {
 
   let { blogId } = useParams();

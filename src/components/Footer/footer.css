@@ -3,6 +3,7 @@
     width: 100%;
     position: relative;
     background: url(./assets/bg.svg) no-repeat;
+    background-color: #FCFCFC;
     background-size: auto;
     display: flex;
     flex-direction: column;
@@ -79,3 +80,30 @@ hr{
     cursor: pointer;
     font-size: .8vw;
 }
+@media only screen and (max-width: 800px) {
+    .footer{
+        height: 1300px;
+    }
+    .parts{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .part h4{
+        font-size: 7vw;
+        margin-top: 25px;
+    }
+    .part ul li{
+        font-size: 4vw;
+    }
+    .copyright-text{
+        flex-direction: column;
+        text-align: center;
+    }
+    .copyright-text p{
+        margin-bottom: 25px;
+    }
+    .copyright-text p, .copyright-text .terms-conditions ul li{
+        font-size: 2.5vw;
+    }
+} 

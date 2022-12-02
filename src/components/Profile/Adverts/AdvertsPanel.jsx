@@ -18,7 +18,7 @@ const AdvertsPanel = (props) => {
     });
   }, []);
   return (
-    <div className='fav-panel'>
+    <div className='fav-panel '>
       <LeftMenu />
       <div className="fav-panel-content">
         {carad === [] ? (

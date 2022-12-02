@@ -112,7 +112,7 @@ const Panel = () => {
                     </Box>
                 </Modal>
                 <div className='grey-div'></div>
-                <button className="change-password" onClick={handleOpen}><KeyIcon style={{ marginRight: '5px' }} /> Şifre Değiştir</button>
+               
                 <NavLink to={`/profile/edit`} ><button className="edit">Düzenle</button></NavLink>
                 <img src={profilePic} alt="" />
 
@@ -139,7 +139,9 @@ const Panel = () => {
                             {moment(date_of_birth).utc().format('YYYY-MM-DD')}
                         </span>
                     </p>
+
                 </div>
+                <button className="change-password" onClick={handleOpen}><KeyIcon style={{ marginRight: '5px' }} /> Şifre Değiştir</button>
             </div>
         </div >
     )

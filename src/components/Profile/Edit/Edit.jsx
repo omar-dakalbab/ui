@@ -16,7 +16,7 @@ const Edit = () => {
 
   const { currentUser } = useContext(AuthContext)
 
-  const [user, setUser] = useState({});
+  // const [user, setUser] = useState({});
   const getUser = () => {
     Axios.get(`https://caravinn-test.herokuapp.com/api/user/${currentUser.id}`).then((resp) => {
       setState({ ...resp.data[0] })

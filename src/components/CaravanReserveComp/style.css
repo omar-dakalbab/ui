@@ -93,3 +93,16 @@ span#price, #icon-price{
     font-size: 1.2rem;
     margin-top: 45px;
 }
+
+@media only screen and (max-width: 800px){
+    .karavan-reserve-comp{
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+    .karavan-reserve-right{
+        padding: 0 25px;
+    }
+    .karavan-reserve-left{
+        padding: 0 15px;
+    }
+}

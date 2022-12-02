@@ -5,7 +5,7 @@
 .wrapper{
 
     position: relative;
-    padding: 50px 120px;
+    padding: 3% 7%;
     border-radius: 36px !important;
     background-color: #fff;
     width: 100%;
@@ -23,5 +23,4 @@ html{
     .navbar .left-menu img{
         width: 95px;
     } 
- 
 } 
