@@ -3,9 +3,12 @@ import Layout from './Layout'
 import './layout.css'
 import Axios from 'axios'
 import { Link } from 'react-router-dom'
-
+import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import useTurkeyCities from "use-turkey-cities";
 
 const AdminCaravan = () => {
+  const [err, setErr] = useState("");
   const [inputs, setInputs] = useState({
     caravan_title: "",
     road: "",
@@ -14,21 +17,24 @@ const AdminCaravan = () => {
     price: "",
     location: "",
   })
-
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleInsert = async e => {
     e.preventDefault()
+    if (inputs.caravan_title == "" || inputs.road == "" || inputs.fuel_type == "" || inputs.caravan_type == "" || inputs.price == "" || inputs.location == "") {
+      setErr("Hata Oluştu, Lütfen boşlukları doldurunuz!");
+    } else {
+      try {
+        await Axios.post("https://caravinn-test.herokuapp.com/api/caravan/add", inputs)
+      }
+      catch (err) {
+        console.log(err)
+      }
+      getCaravan()
+    }
 
-    try {
-      await Axios.post("https://caravinn-test.herokuapp.com/api/caravan/add", inputs)
-    }
-    catch (err) {
-      console.log(err)
-    }
-    getCaravan()
   }
 
   const [caravan_list, SetCaravan_list] = useState([]);
@@ -41,24 +47,27 @@ const AdminCaravan = () => {
 
   useEffect(() => {
     getCaravan()
-  }, [])
+  })
 
   const deleteItem = (id) => {
     Axios.delete(`https://caravinn-test.herokuapp.com/api/caravan/delete/${id}`).then((response) => {
-      console.log(response)
+      getCaravan()
       getCaravan()
     })
   }
   const [search, setSearch] = useState("");
   const [filterData, setFilterData] = useState("")
+
+  const { cities, city, setCity, districts, district, setDistrict } = useTurkeyCities();
   return (
     <div className='admin-panel'>
       <Layout />
       <div className="admin-page-content">
-        <div className="insert-blog">
+
+        <div className="insert-blog" style={{ padding: '35px 15px' }}>
 
           <span className='input-data'>
-            <label>Caravan:</label>
+            <label>Karavan:</label>
             <input type="text" name='caravan_title' onChange={handleChange} />
           </span>
           <span className='input-data'>
@@ -67,11 +76,24 @@ const AdminCaravan = () => {
           </span>
           <span className='input-data'>
             <label>Yakıt Türü:</label>
-            <input type="text" name='fuel_type' onChange={handleChange} />
+            <select name='fuel_type' onChange={handleChange} >
+              <option disabled={true} value="" selected>
+                Seç
+              </option>
+              <option value="Diesel">Diesel</option>
+              <option value="Benzin">Benzin</option>
+            </select>
           </span>
           <span className='input-data'>
             <label>Caravan Türü:</label>
-            <input type="text" name='caravan_type' onChange={handleChange} />
+            <select name='caravan_type' onChange={handleChange}>
+              <option disabled={true} value="" selected>
+                Seç
+              </option>
+              <option value="Çekme">Çekme</option>
+              <option value="Moto">Moto</option>
+            </select>
+            {/* <input type="text" name='caravan_type' onChange={handleChange} /> */}
           </span>
           <span className='input-data'>
             <label>Fiyat:</label>
@@ -79,12 +101,49 @@ const AdminCaravan = () => {
           </span>
           <span className='input-data'>
             <label>Konum:</label>
-            <input type="text" name='location' onChange={handleChange} />
+            <select
+              name='location'
+              onChange={e => {
+                setCity(e.target.value);
+                setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+              }}
+              value={city}
+            >
+              {cities.map(city => (
+                <option key={`city-${city}`} value={city}>
+                  {city}
+                </option>
+
+              ))}
+            </select>
           </span>
 
-          <button id='insert' onClick={handleInsert}>Insert Caravan</button>
+          <button id='insert' onClick={handleInsert} style={{ width: '100%' }}>Karavan Ekle</button>
+
+          {
+            err ? (
+              <div>
+                <p
+                  style={{
+                    color: 'white',
+                    fontWeight: '400',
+                    textAlign: 'center',
+                    padding: 15,
+                    margin: '20px 0',
+                    backgroundColor: '#cc0000',
+                    transition: '0.7s'
+                  }}
+                >
+                  {err && err}
+                </p>
+              </div>
+            )
+              :
+              (
+                <div></div>
+              )
+          }
         </div>
-        <br />
 
         <div className="table">
           <div style={{ display: 'flex' }}>
@@ -99,17 +158,17 @@ const AdminCaravan = () => {
               <option value="location">location</option>
               <option value="rented">rented</option>
             </select>
-          </div>  
+          </div>
           <table>
             <tr>
-              <th>Caravan ID</th>
-              <th>Caravan Title</th>
-              <th>Road</th>
-              <th>Fuel Type</th>
-              <th>Caravan Type</th>
-              <th>Price</th>
-              <th>Location</th>
-              <th>Rented</th>
+              <th>Karavan ID</th>
+              <th>Karavan Başlığı</th>
+              <th>Yol</th>
+              <th>Yakıt türü</th>
+              <th>Karavan türü</th>
+              <th>Fiyat</th>
+              <th>İlçe</th>
+              <th>Durumu</th>
             </tr>
             {caravan_list.filter((val) => {
               if (filterData === 'caravan_title') {
@@ -158,13 +217,17 @@ const AdminCaravan = () => {
                   <td>{val.price}</td>
                   <td>{val.location}</td>
                   <td>{val.rented}</td>
-                  <Link to={`update/${val.id}`}><button style={{ margin: 10, padding: 15 }}>Düzenle</button></Link>
-                  <button onClick={() => deleteItem(val.id)} style={{ margin: 10, padding: 15 }}>Sil</button>
+                  <div style={{display: 'flex', padding: 24}}> 
+                    <Link to={`update/${val.id}`}><button style={{ margin: 10, backgroundColor: 'transparent' }}><ModeEditOutlineOutlinedIcon style={{ color: '#0B91C5' }} /></button></Link>
+                    <button onClick={() => deleteItem(val.id)} style={{ margin: 10, backgroundColor: 'transparent' }}><DeleteOutlineOutlinedIcon style={{ color: 'grey' }} /></button>
+                  </div>
                 </tr>
               )
             })}
           </table>
         </div>
+
+
       </div>
     </div>
   )

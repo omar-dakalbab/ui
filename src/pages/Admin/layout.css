@@ -2,16 +2,20 @@
     background-color: #FFF;
     color: #FFF;
     height: 150vh;
-    padding: 5%;
+    padding: 2% 0;
 }
 .admin-page-content{
     display: flex;
-    flex-direction: column;
-    padding: 30px;
+    justify-content: space-between;
+    padding: 20px;
 }
 .admin-left-menu ul li{
-    padding: 30px;
-    text-align: center;  
+    padding: 20px 30px;  
+    transition: 0.8s;
+}
+.admin-left-menu ul li:hover{
+    background-color: #c5dce5; 
+    transition: 0.8s;
 }
 .admin-left-menu ul .link{
     color: #0B91C5;
@@ -32,7 +36,7 @@ select#select-filter{
     height: 50px;
     text-align: center;
 }
-.input-data input{
+.input-data input, select{
     height: 50px;
     width: 100%;
     padding: 15px;
@@ -58,7 +62,8 @@ select#select-filter{
     display: flex;
     flex-direction: column;
     margin-top: 50px;
-    width: 100%;
+    width: 80%;
+    padding-right: 15px;
 }
 .table input{
     width: 100%;

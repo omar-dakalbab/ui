@@ -99,8 +99,9 @@ input#mainInput{
     display: flex;
     align-items: center;
     margin-left: 20px;
-
+    max-width: 170px;
 }
+    
 .dateInput img{
     margin-right: 15px;
 }

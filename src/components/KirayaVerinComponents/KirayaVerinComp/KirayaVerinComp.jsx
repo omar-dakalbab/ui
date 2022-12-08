@@ -65,18 +65,18 @@ const KirayaVerinComp = () => {
                 <input onChange={handleChange} id='bedel' type="text" name='location' placeholder='Karavan yeri' />
                 <input onChange={handleChange} id='bedel' type="text" name='fuel_type' placeholder='Karavan yakıt türü' />
                 <input onChange={handleChange} id='bedel' type="text" name='price' placeholder='Günlük Kiralama Bedeli' />
-                <label> Choose your rent date:</label>
+                <label> Ne zaman kiralamak isterseniz:</label>
                 <div className="dates" style={{ display: 'flex', width: '100%', marginTop: '5px' }}>
                     <input style={{ width: '49%' }} onChange={handleChange} id='bedel' type="date" name='startDate' />
                     <input style={{ width: '49%', marginLeft: '15px' }} onChange={handleChange} onClick={handleInterviewDateClick} ref={interviewDateRef} id='bedel' type="date" name='endDate' />
                 </div>
-                <div className="file-images">
+                {/* <div className="file-images">
                     <input type="file" name="" id="" />
                     <input type="file" name="" id="" />
                     <input type="file" name="" id="" />
                     <input type="file" name="" id="" />
                     <input type="file" name="" id="" />
-                </div>
+                </div> */}
                 <div className="kisisel-bilgi">
                     <span>Kişisel Bilgiler</span>
                     <div className="name">
