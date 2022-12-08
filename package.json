@@ -36,7 +36,6 @@
     "react-select": "^5.5.9",
     "react-slideshow-image": "^4.0.5",
     "react-toastify": "^9.1.1",
-    "use-turkey-cities": "^0.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
