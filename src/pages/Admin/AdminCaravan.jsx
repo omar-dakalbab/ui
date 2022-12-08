@@ -5,7 +5,7 @@ import Axios from 'axios'
 import { Link } from 'react-router-dom'
 import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
-import useTurkeyCities from "use-turkey-cities";
+
 
 const AdminCaravan = () => {
   const [err, setErr] = useState("");
@@ -58,7 +58,7 @@ const AdminCaravan = () => {
   const [search, setSearch] = useState("");
   const [filterData, setFilterData] = useState("")
 
-  const { cities, city, setCity, districts, district, setDistrict } = useTurkeyCities();
+
   return (
     <div className='admin-panel'>
       <Layout />
@@ -101,21 +101,8 @@ const AdminCaravan = () => {
           </span>
           <span className='input-data'>
             <label>Konum:</label>
-            <select
-              name='location'
-              onChange={e => {
-                setCity(e.target.value);
-                setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }))
-              }}
-              value={city}
-            >
-              {cities.map(city => (
-                <option key={`city-${city}`} value={city}>
-                  {city}
-                </option>
+            <input type="text" name='location' onChange={handleChange} />
 
-              ))}
-            </select>
           </span>
 
           <button id='insert' onClick={handleInsert} style={{ width: '100%' }}>Karavan Ekle</button>
