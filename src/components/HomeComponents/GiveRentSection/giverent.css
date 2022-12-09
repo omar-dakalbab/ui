@@ -13,9 +13,9 @@
 .giveRent .content{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     position: absolute;
-    padding: 60px 7%;
+    padding: 60px 8%;
 }
 .giveRent .left-menu h1:nth-child(1){
     color: #2689B2;
@@ -25,6 +25,7 @@
 }
 .giveRent .left-menu h1{
     font-size: 3vw;
+    line-height: 120.5%;
 }
 .giveRent .left-menu .item{
     margin-top: 35px;

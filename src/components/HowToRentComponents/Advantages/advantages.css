@@ -1,12 +1,11 @@
 .advantages{
-    height: 800px;
+    height: 1000px;
     background-color: #FFF;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 10%;
-    margin-top: 130px;
+    padding: 9%;
     
 }
 .advantages-text{
@@ -25,8 +24,9 @@
     max-width: 700px;
     font-style: normal;
     font-weight: 600;
-    font-size: 58px;
-    line-height: 87px;
+    font-size: 3vw;
+    line-height: 5vw;
+    margin-left: 35px;
 }
 
 .advantages .flex{

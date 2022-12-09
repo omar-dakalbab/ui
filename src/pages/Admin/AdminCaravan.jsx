@@ -23,7 +23,7 @@ const AdminCaravan = () => {
 
   const handleInsert = async e => {
     e.preventDefault()
-    if (inputs.caravan_title == "" || inputs.road == "" || inputs.fuel_type == "" || inputs.caravan_type == "" || inputs.price == "" || inputs.location == "") {
+    if (inputs.caravan_title === "" || inputs.road === "" || inputs.fuel_type === "" || inputs.caravan_type === "" || inputs.price === "" || inputs.location === "") {
       setErr("Hata Oluştu, Lütfen boşlukları doldurunuz!");
     } else {
       try {

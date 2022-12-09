@@ -2,7 +2,7 @@ import React from 'react'
 import './footer.css'
 import arrowBtn from './assets/arrow-btn.svg'
 import Logo from './assets/logo.png'
-import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import { IoCallOutline, IoLocationOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom'
@@ -24,6 +24,8 @@ const Footer = (props) => {
                             <span><FaFacebookF /></span>
                             <span><FaInstagram /></span>
                             <span><FaTwitter /></span>
+                            <span><FaLinkedin /></span>
+                            <span><FaYoutube /></span>
                         </div>
                     </div>
                     <div className="part">
@@ -47,9 +49,29 @@ const Footer = (props) => {
                     </div>
                     <div className="part">
                         <ul>
-                            <li><FiMail style={{ marginRight: 10, fontSize: 18 }} /> info@caravinn.com</li>
-                            <li><IoCallOutline style={{ marginRight: 10, fontSize: 18 }} /> +0 (212) 909 40 62</li>
-                            <li><IoLocationOutline style={{ marginRight: 10, fontSize: 18 }} />  Esentepe Mah. Talatpaşa Cad. No:5, Şişli, İstanbul</li>
+                            <a target="_blank" rel="noopener noreferrer" href='mailto:info@caravinn.com'>
+                                <li>
+                                    <FiMail
+                                        style={{
+                                            marginRight: 10,
+                                            fontSize: 18
+                                        }}
+                                    />
+                                    info@caravinn.com
+                                </li>
+                            </a>
+                            <a target="_blank" rel="noopener noreferrer" href='tel:+902129094062'>
+                                <li>
+                                    <IoCallOutline style={{ marginRight: 10, fontSize: 18 }} />
+                                    +0 (212) 909 40 62
+                                </li>
+                            </a>
+                            <a target="_blank" rel="noopener noreferrer" href='http://maps.google.com/?q=Esentepe Mah. Talatpaşa Cad. No:5, Şişli, İstanbul'>
+                                <li>
+                                    <IoLocationOutline style={{ marginRight: 10, fontSize: 18 }} />
+                                    Esentepe Mah. Talatpaşa Cad. No:5, Şişli, İstanbul
+                                </li>
+                            </a>
                         </ul>
                     </div>
                 </div>
@@ -57,9 +79,9 @@ const Footer = (props) => {
                     <p>Sitede yayınlanan içerikler izinsiz kullanılamaz. Tüm hakları Saklıdır.</p>
                     <div className="terms-conditions">
                         <ul>
-                            <li>Gizlilik Sözleşmesi</li>
-                            <li>Kullanım Koşulları</li>
-                            <Link to={'/kvkk-cerezler'}><li>Çerezler</li></Link>
+                            <Link style={{ color: '#196CA5' }} to={'/kvkk-cerezler'}><li>Gizlilik Sözleşmesi</li></Link>
+                            <Link style={{ color: '#196CA5' }} to={'/kvkk-cerezler'}><li>Kullanım Koşulları</li></Link>
+                            <Link style={{ color: '#196CA5' }} to={'/kvkk-cerezler'}><li>Çerezler</li></Link>
                         </ul>
                     </div>
                 </div>

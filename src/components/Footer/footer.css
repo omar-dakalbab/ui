@@ -3,7 +3,6 @@
     width: 100%;
     position: relative;
     background: url(./assets/bg.svg) no-repeat;
-    background-color: #FCFCFC;
     background-size: auto;
     display: flex;
     flex-direction: column;

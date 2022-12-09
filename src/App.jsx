@@ -45,7 +45,7 @@ import AdminComments from './pages/Admin/AdminComments'
 import AdminRentedCaravan from './pages/Admin/AdminRentedCaravan'
 import RentedHistory from './pages/Profile/RentedHistory'
 import NavbarWhite from './components/NavBar/NavbarWhite'
-
+import PageNotFound from './pages/PageNotFound/PageNotFound'
 const App = () => {
 
   const { currentUser } = useContext(AuthContext)
@@ -63,7 +63,7 @@ const App = () => {
     return (
       <div>
         <Outlet />
-        <Footer />
+        <Footer bg='white'/>
       </div>
     )
   }
@@ -252,6 +252,10 @@ const App = () => {
       path: "/sign-up",
       element: <Signup />
     },
+    {
+      path: "*",
+      element: <PageNotFound/>
+    }
   ])
 
   return (
