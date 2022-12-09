@@ -21,7 +21,6 @@ const Header = () => {
                 </div>
                 <div className="flex-2">
                     <img src={map} alt="map" style={{ maxWidth: '100%'  }} className='map-img'/>
-                    {/* <Maps/> */}
                 </div>
             </div>
         </div>
