@@ -10,9 +10,14 @@ const Questions = () => {
 
     const [faqs, setfaqs] = useState([
         {
+            question: "Caravınn Nedir?",
+            answer: "Caravinn, karavanlarla seyahat etme yaşam tarzını ülkemizde yaygınlaştırmak amacıyla kurulmuş, karavan kiralamak için çevrimiçi bir pazar yeridir. Bu modern karavan kiralama platformunun yardımıyla, artık Türkiye'nin onlarca şehrinden karavan, karavan ve küçük evler de dahil olmak üzere çeşitli konaklama birimleri kiralamak mümkün. Caravinn, Türk karavan sektöründeki sorunları çözerek kendi karavanından para kazanmak isteyenler için bir pazar yaratmanın yanı sıra, karavanları maceracılarla buluşturarak keyifli anılar yaratacak hızlı ve güvenilir bir hizmet sunmayı amaçlıyor.",
+            open: true
+        },
+        {
             question: "Caravınn'da ilan vermek ücretli midir?",
             answer: "Caravınn'da karavan ilanı oluşturmak için herhangi bir ücret vermenize gerek yoktur. Size veya işletmenize ait herhangi bir sayıda karavan ile  kendi reklam sayfanıza sahip olabilirsiniz. İlan açarak reklam oluşturmak  için hiçbir ücrete gerek yoktur.",
-            open: true
+            open: false
         },
         {
             question: "Şirket değilim, kendi karavanımı boş zamanlarında burada listeleyebilir miyim?",
@@ -42,11 +47,6 @@ const Questions = () => {
         {
             question: "Depozito vermek zorunlu mudur?",
             answer: "Karavanın olası hasarı, trafik cezası ve köprü geçişleri nedeniyle depozito çok önemlidir. bu nedenle karavan sahipleri depozito isteyebilir; İlanları incelerken karavan özelliklerinde depozito tutarını görebilirsiniz.",
-            open: false
-        },
-        {
-            question: "Caravınn Nedir?",
-            answer: "Caravinn, karavanlarla seyahat etme yaşam tarzını ülkemizde yaygınlaştırmak amacıyla kurulmuş, karavan kiralamak için çevrimiçi bir pazar yeridir. Bu modern karavan kiralama platformunun yardımıyla, artık Türkiye'nin onlarca şehrinden karavan, karavan ve küçük evler de dahil olmak üzere çeşitli konaklama birimleri kiralamak mümkün. Caravinn, Türk karavan sektöründeki sorunları çözerek kendi karavanından para kazanmak isteyenler için bir pazar yaratmanın yanı sıra, karavanları maceracılarla buluşturarak keyifli anılar yaratacak hızlı ve güvenilir bir hizmet sunmayı amaçlıyor.",
             open: false
         },
         {
