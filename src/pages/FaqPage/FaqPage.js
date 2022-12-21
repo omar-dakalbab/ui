@@ -68,17 +68,17 @@ const Questions = () => {
         },
         {
             question: "Onaylı Kullanıcı Nedir?",
-            answer: "Caravnn.com'a üye olduktan sonra profillerini tamamlayan kullanıcılar onaylı kullanıcı olarak kabul edilir. Karavan sadece bu kullanıcılar tarafından kiralanabilir. Hesabınızı doğrulamak %100 ücretsizdir. Caravınn'a kaydolmak ve profilinizi tamamlamak için gerekli verileri girmeniz yeterlidir. Karavan sahiplerinin misafirleri için yaptığımız kontrollerin aynısını biz de yapıyor ve karavan sahiplerini güvenilir karavan severlerle eşleştiriyoruz.",
+            answer: "caravınn.com'a üye olduktan sonra profillerini tamamlayan kullanıcılar onaylı kullanıcı olarak kabul edilir. Karavan sadece bu kullanıcılar tarafından kiralanabilir. Hesabınızı doğrulamak %100 ücretsizdir. Caravınn'a kaydolmak ve profilinizi tamamlamak için gerekli verileri girmeniz yeterlidir. Karavan sahiplerinin misafirleri için yaptığımız kontrollerin aynısını biz de yapıyor ve karavan sahiplerini güvenilir karavan severlerle eşleştiriyoruz.",
             open: false
         },
         {
             question: "Nasıl Onaylı Kullanıcı olabilirim?",
-            answer: "caravnn.com'a kayıt olduktan ve e-posta adresinizi onayladıktan sonra sisteme  giriş yapın. Ekranın sağ üst köşesinde profil resminiz olacak şekilde açılan pencerenin ''Kişisel Bilgiler'' sayfasında sizden istenen bilgileri girin ve kaydedin. İstenen bilgiler ile sağladığınız kimlik bilgileri uyuştuğunda sistem sizi yetkili kullanıcı olarak kaydedecektir.",
+            answer: "caravınn.com'a kayıt olduktan ve e-posta adresinizi onayladıktan sonra sisteme  giriş yapın. Ekranın sağ üst köşesinde profil resminiz olacak şekilde açılan pencerenin ''Kişisel Bilgiler'' sayfasında sizden istenen bilgileri girin ve kaydedin. İstenen bilgiler ile sağladığınız kimlik bilgileri uyuştuğunda sistem sizi yetkili kullanıcı olarak kaydedecektir.",
             open: false
         },
         {
             question: "Rezervasyonumu uzatmak istersem ne yapmalıyım?",
-            answer: "Uzun bir yolculuk olacağa benziyor! Seyahat tarihlerinizi seyahatinizden önce veya seyahatiniz sırasında değiştirmek isterseniz, öncelikle caravnn.com'da karavan sahibinin karavanının hala müsait olup olmadığına bakmalısınız. Kiraladığınız tarihin devamında takip eden günler seçtiğiniz karavan için uygunsa  Caravınn ilan sayfasını ziyaret edebilir, uzatmak istediğiniz tarihleri seçip ödeme yaparak işlemi tamamlayabilirsiniz.",
+            answer: "Uzun bir yolculuk olacağa benziyor! Seyahat tarihlerinizi seyahatinizden önce veya seyahatiniz sırasında değiştirmek isterseniz, öncelikle caravınn.com'da karavan sahibinin karavanının hala müsait olup olmadığına bakmalısınız. Kiraladığınız tarihin devamında takip eden günler seçtiğiniz karavan için uygunsa  Caravınn ilan sayfasını ziyaret edebilir, uzatmak istediğiniz tarihleri seçip ödeme yaparak işlemi tamamlayabilirsiniz.",
             open: false
         },
         {
@@ -138,7 +138,7 @@ const Questions = () => {
         },
         {
             question: "Araçların kaskosu var mı?",
-            answer: "Caravnn platformu olarak karavan sahiplerine çok çeşitli sigorta alternatifleri sunuyoruz. Karavan sahibi, sunduğumuz 'Sigorta' seçeneğini tercih ederse ve kendi sigortası yoksa seyahatinizin sigortası Caravınn tarafından oluşturulur. Sigorta bedeli seyahat günü boyunca hesaplanır ve misafirlerden 'ekstra ücret' olarak tahsil edilir.",
+            answer: "caravınn platformu olarak karavan sahiplerine çok çeşitli sigorta alternatifleri sunuyoruz. Karavan sahibi, sunduğumuz 'Sigorta' seçeneğini tercih ederse ve kendi sigortası yoksa seyahatinizin sigortası Caravınn tarafından oluşturulur. Sigorta bedeli seyahat günü boyunca hesaplanır ve misafirlerden 'ekstra ücret' olarak tahsil edilir.",
             open: false
         },
         {
