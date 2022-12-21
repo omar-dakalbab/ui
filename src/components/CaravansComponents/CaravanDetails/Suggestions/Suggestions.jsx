@@ -7,11 +7,11 @@ const Suggestions = () => {
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <h1 style={{ color: '#196CA5' }}>Benzer İlanlar</h1>
-            <div className="cards-caravan" style={{ display: 'flex', padding: '0 10%' }}>
+            <h1 style={{ color: '#196CA5', marginBottom: 35}}>Benzer İlanlar</h1>
+            <div className="cards-caravan" style={{ display: 'flex', padding: '0 10%', marginBottom: 65 }}>
                 <CaravansCard limit={limit} request="all"/>
             </div>
-            <br />
+            
             <Link to={'/kiralik-karavanlar'}><button style={{
                 padding: '10px 40px',
                 borderRadius: 30,

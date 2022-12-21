@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import './style.css'
 import bg from './bg.png'
 import Axios from 'axios'
@@ -31,15 +31,76 @@ const KirayaVerinComp = () => {
     const { currentUser } = useContext(AuthContext)
     const handleClick = async e => {
         e.preventDefault()
+        var formData = new FormData();
 
+        for (const file of files) {
+            formData.append('files', file)
+
+        }
+        formData.append('inputs', JSON.stringify(inputs))
+        const config = {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            }
+        }
         try {
-            await Axios.post(`https://caravinn-test.herokuapp.com/api/rent/send-requset/${currentUser.id}`, inputs).then((response) => {
+            await Axios.post(`https://caravinn-test.herokuapp.com/api/rent/send-requset/${currentUser.id}`, formData, config).then((response) => {
                 console.log(response)
             })
         }
         catch (err) {
             console.log(err)
         }
+    }
+    const imageTypeRegex = /image\/(png|jpg|jpeg)/gm;
+    const [imageFiles, setImageFiles] = useState([]);
+    const [images, setImages] = useState([]);
+    useEffect(() => {
+
+        const images = [], fileReaders = [];
+        let isCancel = false;
+        if (imageFiles.length) {
+            imageFiles.forEach((file) => {
+                const fileReader = new FileReader();
+                fileReaders.push(fileReader);
+                fileReader.onload = (e) => {
+                    const { result } = e.target;
+                    if (result) {
+                        images.push(result)
+                    }
+                    if (images.length === imageFiles.length && !isCancel) {
+                        setImages(images);
+                    }
+                }
+                fileReader.readAsDataURL(file);
+            })
+        };
+        return () => {
+            isCancel = true;
+            fileReaders.forEach(fileReader => {
+                if (fileReader.readyState === 1) {
+                    fileReader.abort()
+                }
+            })
+        }
+    }, [imageFiles]);
+
+    const [files, setFile] = useState("");
+    const setimgfile = (e) => {
+        setFile(e.target.files)
+        const { files } = e.target;
+        const validImageFiles = [];
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            if (file.type.match(imageTypeRegex)) {
+                validImageFiles.push(file);
+            }
+        }
+        if (validImageFiles.length) {
+            setImageFiles(validImageFiles);
+            return;
+        }
+        alert("Selected images are not of valid type!");
     }
 
     return (
@@ -70,13 +131,23 @@ const KirayaVerinComp = () => {
                     <input style={{ width: '49%' }} onChange={handleChange} id='bedel' type="date" name='startDate' />
                     <input style={{ width: '49%', marginLeft: '15px' }} onChange={handleChange} onClick={handleInterviewDateClick} ref={interviewDateRef} id='bedel' type="date" name='endDate' />
                 </div>
-                {/* <div className="file-images">
-                    <input type="file" name="" id="" />
-                    <input type="file" name="" id="" />
-                    <input type="file" name="" id="" />
-                    <input type="file" name="" id="" />
-                    <input type="file" name="" id="" />
-                </div> */}
+                <div className="file-images">
+                    <input type="file" name='photo' onChange={setimgfile} multiple accept="image/png, image/jpg, image/jpeg" />
+                    {
+                        images.length > 0 ?
+                            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+                                {
+                                    images.map((image, idx) => {
+                                        return <p key={idx}> <img src={image} alt="" style={{ width: '200px' }} /> </p>
+                                    })
+                                }
+                            </div>
+                            :
+                            <div>
+                                <p>...</p>
+                            </div>
+                    }
+                </div>
                 <div className="kisisel-bilgi">
                     <span>Kişisel Bilgiler</span>
                     <div className="name">

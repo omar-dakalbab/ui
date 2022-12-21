@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import './update.css'
 import Axios from 'axios'
 import { useEffect } from 'react';
-
+import Layout from './Layout'
 const CaravanUpdate = () => {
     const { id } = useParams()
     const getCaravan = () => {
@@ -23,9 +23,11 @@ const CaravanUpdate = () => {
         price: "",
         location: "",
         rented: "",
+        pr: "",
+        images: "",
     }
     const [state, setState] = useState(initialState);
-    const { caravan_title, road, fuel_type, caravan_type, price, location, rented } = state;
+    const { caravan_title, road, fuel_type, caravan_type, price, location, rented, pr, images } = state;
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -41,93 +43,133 @@ const CaravanUpdate = () => {
                 price,
                 location,
                 rented,
+                pr,
+                images,
             })
             .then(() => {
-                setState({ caravan_title: "", road: "", fuel_type: "", caravan_type: "", price: "", location: "", rented: "" })
+                setState({
+                    caravan_title: "",
+                    road: "",
+                    fuel_type: "",
+                    caravan_type: "",
+                    price: "",
+                    location: "",
+                    rented: "",
+                    pr: "",
+                    images: "",
+                })
             })
             .catch((err) => console.log(err));
         nav('/admin/caravans')
     }
     return (
-        <div className='update-panels' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-            <div>
-                <label htmlFor="title">Title</label>
-                <input
-                    type="text"
-                    id='title'
-                    name='caravan_title'
-                    placeholder='title'
-                    value={caravan_title || ""}
-                    onChange={handleChange}
-                />
+        <div className='admin-panel'>
+            <Layout />
+            <div className="admin-page-content">
+                <div className="insert-blog">
+                    <div className='input-data'>
+                        <label htmlFor="title">Karavan Başlığı</label>
+                        <input
+                            type="text"
+                            id='title'
+                            name='caravan_title'
+                            placeholder='title'
+                            value={caravan_title || ""}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className='input-data'>
+                        <label htmlFor="road">Yol</label>
+                        <input
+                            type="text"
+                            id='road'
+                            name='road'
+                            placeholder='road'
+                            value={road || ""}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className='input-data'>
+                        <label htmlFor="fuel">Yakıt</label>
+                        <input
+                            type="text"
+                            id='fuel'
+                            name='fuel_type'
+                            placeholder='fuel'
+                            value={fuel_type || ""}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className='input-data'>
+                        <label htmlFor="type">Karavan Türü</label>
+                        <input
+                            type="text"
+                            id='type'
+                            name='caravan_type'
+                            placeholder='type'
+                            value={caravan_type || ""}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className='input-data'>
+                        <label htmlFor="price">Fiayt</label>
+                        <input
+                            type="text"
+                            id='price'
+                            name='price'
+                            placeholder='price'
+                            value={price || ""}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className='input-data'>
+                        <label htmlFor="location">İlçe</label>
+                        <input
+                            type="text"
+                            id='location'
+                            name='location'
+                            placeholder='location'
+                            value={location || ""}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className='input-data'>
+                        <label htmlFor="location">Durumu</label>
+                        <input
+                            type="text"
+                            id='rented'
+                            name='rented'
+                            placeholder='rented'
+                            value={rented || ""}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className='input-data'>
+                        <label htmlFor="pr">Pr</label>
+                        <input
+                            type="text"
+                            id='pr'
+                            name='pr'
+                            placeholder='pr'
+                            value={pr || ""}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className='input-data'>
+                        <label htmlFor="images">Images</label>
+                        <textarea
+                            type="text"
+                            id='images'
+                            name='images'
+                            placeholder='images'
+                            value={images || ""}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <button id='insert' onClick={handleSubmit}>Güncelle</button>
+                </div>
             </div>
-            <div>
-                <label htmlFor="road">Road</label>
-                <input
-                    type="text"
-                    id='road'
-                    name='road'
-                    placeholder='road'
-                    value={road || ""}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label htmlFor="fuel">Fuel</label>
-                <input
-                    type="text"
-                    id='fuel'
-                    name='fuel_type'
-                    placeholder='fuel'
-                    value={fuel_type || ""}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label htmlFor="type">Type</label>
-                <input
-                    type="text"
-                    id='type'
-                    name='caravan_type'
-                    placeholder='type'
-                    value={caravan_type || ""}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label htmlFor="price">Price</label>
-                <input
-                    type="text"
-                    id='price'
-                    name='price'
-                    placeholder='price'
-                    value={price || ""}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label htmlFor="location">Location</label>
-                <input
-                    type="text"
-                    id='location'
-                    name='location'
-                    placeholder='location'
-                    value={location || ""}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label htmlFor="location">Rented</label>
-                <input
-                    type="text"
-                    id='rented'
-                    name='rented'
-                    placeholder='rented'
-                    value={rented || ""}
-                    onChange={handleChange}
-                />
-            </div>
-            <input type="submit" value="Güncelle" onClick={handleSubmit} />
+
         </div>
     )
 }

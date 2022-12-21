@@ -59,6 +59,9 @@ span#line-hr{
     right: 29px;
     color: red;
 }
+.promoted{
+    position: absolute;
+}
 @media only screen and (max-width: 800px) {
 
     .card img{

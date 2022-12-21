@@ -26,7 +26,7 @@ const AdvertsPanel = (props) => {
         ) : (
           carad.slice(0, props.limit).map((val, key) => {
             return (
-              <AdvertCard cardid={val.id} img={caravan} title={val.caravan_title} location={val.location} road={val.road} fuel={val.fuel_type} type={val.caravan_type} />
+              <AdvertCard cardid={val.id} img={caravan} title={val.caravan_title} location={val.location} road={val.road} fuel={val.fuel_type} type={val.caravan_type} price={val.price} pr={val.pr}/>
             );
           })
         )}

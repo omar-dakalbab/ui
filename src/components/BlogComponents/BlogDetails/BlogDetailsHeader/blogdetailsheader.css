@@ -24,6 +24,9 @@
 
 img.blog-details-header-img{
     z-index: 10;
+    width: auto;
+    border-radius: 35px;
+    max-height: 60vh;
 }
 .blog-details-header-div{
     display: flex;

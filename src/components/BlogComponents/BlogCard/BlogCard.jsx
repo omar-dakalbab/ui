@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './blogcard.css'
 import Axios from 'axios'
-import bg from './assets/bg1.png'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const BlogCard = (props) => {
 
     const [blogList, SetblogList] = useState([]);
-    let navigate = useNavigate();
+   
     useEffect(() => {
         Axios.get("https://caravinn-test.herokuapp.com/api/blog/post").then((response) => {
             SetblogList(response.data)
@@ -20,16 +19,13 @@ const BlogCard = (props) => {
             ) : (
                 blogList.map((val, key) => {
                     return (
-                        <div className="blog-main-page-card"
-                            onClick={() => {
-                                navigate(`/blog/${val.id}`);
-                            }}
-                            key={key}
-                            style={{ width: props.width, cursor: 'pointer' }}
-                        >
-                            <img src={bg} alt="" />
-                            <p>{val.blog_title}</p>
-                            {/* <h3>{val.blog_header}</h3> */}
+                        <div style={{ cursor: 'pointer' }}>
+                            <Link to={`/blog/${val.id}`}>
+                                <div key={key} className="blog-main-page-card">
+                                    <img src={process.env.PUBLIC_URL + `/img/${val.blog_image}`} alt="" style={{borderTopLeftRadius: 20, borderTopRightRadius: 20, width: '100%'}} />
+                                    <p style={{padding: '25px', color: '#000'}}>{val.blog_title}</p>
+                                </div>
+                            </Link>
                         </div>
                     );
                 })

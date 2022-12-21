@@ -12,7 +12,7 @@ const BlogDetailsWrapper = (props) => {
     return (
         <div className="blog-details-wrapper" >
             <h1>{props.header}</h1>
-            <div style={{ padding: '0 15%', textAlign: 'center' }}>
+            <div style={{ padding: '0 15%',marginTop: '50px', textAlign: 'left', whiteSpace: 'pre-line'}}>
                 <span>{props.body}</span>
             </div>
             <br />

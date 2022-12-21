@@ -4,15 +4,26 @@ import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import benzin from '../../../assets/benzin.svg'
 import cara from '../../../assets/cara.svg'
+
 import './card.css'
 import { NavLink } from 'react-router-dom';
 import Axios from 'axios';
+import promotion from './promotion.png'
+
 const Card = (props) => {
-    const [likeData, setLikeData] = useState({});
+    
     const id = props.cardid;
     const userid = props.userid;
     const [liked, SetLiked] = useState(false)
+    const [likeData, setLikeData] = useState({});
+    const [promoted, SetPromoted] = useState(false)
+    const [img, setImage] = useState({});
     useEffect(() => {
+        if (props.img) {
+            var urls = props.img;
+            var array = urls.split(',');
+            setImage(array)
+        }
         const config = {
             withCredentials: true,
             headers: {
@@ -27,6 +38,12 @@ const Card = (props) => {
                 SetLiked(false)
             }
         })
+        const pr = props.pr;
+        if (pr == 1) {
+            SetPromoted(true)
+        } else {
+            SetPromoted(false)
+        }
     })
 
     const insertLike = async () => {
@@ -40,9 +57,8 @@ const Card = (props) => {
         }
     }
 
-
     return (
-        <div className="card">
+        <div className="card" style={{ width: 350, height: '100%' }}>
             {userid ?
                 <div className="like-button" onClick={insertLike}>
                     {liked ? <FavoriteOutlinedIcon /> : <FavoriteTwoToneIcon style={{ color: '#fff' }} />}
@@ -50,35 +66,47 @@ const Card = (props) => {
                 :
                 <div></div>
             }
-            <NavLink style={{ color: '#000' }} to={`/caravan/${id}`}>
-                <img src={props.img} alt='' />
-                <h3>{props.title}</h3>
-                <hr />
-
-                <div className="location">
-                    <p>{props.price} TL</p>
+            <NavLink style={{ color: '#000', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }} to={`/caravan/${id}`}>
+                <div>
+                    {promoted ?
+                        <div className="promoted">
+                            <img src={promotion} alt="" />
+                        </div>
+                        :
+                        <div></div>
+                    }
+                    <img src={process.env.PUBLIC_URL + `/img/${img[0]}`} style={{ borderRadius: 15, width: '95%' }} alt='' />
                 </div>
+                <div>
+                    <h3>{props.title}</h3>
+                    <hr />
 
-                <hr />
 
-                <div className="location">
-                    <i className="fa-solid fa-location-dot"></i>
-                    <p>{props.location}</p>
-                </div>
-
-                <hr />
-                <div className="icons">
-                    <div className="icon">
-                        <img src={road} alt="" />
-                        <p>{props.road}</p>
+                    <div className="location">
+                        <p>{props.price} TL</p>
                     </div>
-                    <div className="icon">
-                        <img src={benzin} alt="" />
-                        <p>{props.fuel}</p>
+
+                    <hr />
+
+                    <div className="location">
+                        <i className="fa-solid fa-location-dot"></i>
+                        <p>{props.location}</p>
                     </div>
-                    <div className="icon">
-                        <img src={cara} alt="" />
-                        <p>{props.type}</p>
+
+                    <hr />
+                    <div className="icons">
+                        <div className="icon">
+                            <img src={road} alt="" />
+                            <p>{props.road}</p>
+                        </div>
+                        <div className="icon">
+                            <img src={benzin} alt="" />
+                            <p>{props.fuel}</p>
+                        </div>
+                        <div className="icon">
+                            <img src={cara} alt="" />
+                            <p>{props.type}</p>
+                        </div>
                     </div>
                 </div>
             </NavLink>

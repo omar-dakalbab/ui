@@ -46,10 +46,12 @@ import AdminRentedCaravan from './pages/Admin/AdminRentedCaravan'
 import RentedHistory from './pages/Profile/RentedHistory'
 import NavbarWhite from './components/NavBar/NavbarWhite'
 import PageNotFound from './pages/PageNotFound/PageNotFound'
+import AdminLogin from './pages/Admin/AdminLogin'
+
+
 const App = () => {
 
   const { currentUser } = useContext(AuthContext)
-
 
 
   const ProtectedRoute = ({ children }) => {
@@ -59,11 +61,12 @@ const App = () => {
     return children
   }
 
+
   const MainLayout = () => {
     return (
       <div>
         <Outlet />
-        <Footer bg='white'/>
+        <Footer bg='white' />
       </div>
     )
   }
@@ -71,7 +74,7 @@ const App = () => {
   const AdminLayout = () => {
     return (
       <div>
-        <Outlet />
+          <Outlet />
       </div>
     )
   }
@@ -80,7 +83,7 @@ const App = () => {
     return (
       <div>
         <ProtectedRoute>
-          <NavbarWhite/>
+          <NavbarWhite />
           <Outlet />
         </ProtectedRoute>
       </div>
@@ -254,7 +257,11 @@ const App = () => {
     },
     {
       path: "*",
-      element: <PageNotFound/>
+      element: <PageNotFound />
+    },
+    {
+      path: "/admin-caravinn",
+      element: <AdminLogin />
     }
   ])
 

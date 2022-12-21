@@ -1,13 +1,24 @@
 .caravan-details-header, .caravan-images, .small-images{
     display: flex;
+    align-items: center;
 }
-
+.caravan-images{
+    width: 50vw;
+    justify-content: center;
+}
 .small-images{
     flex-direction: column;
+    justify-content: center;
     margin-left: 10px;
+    max-height: 600px;
+}
+.main-image img{
+    width: auto;
+    height: 650px;
 }
 .small-images img{
     margin-bottom: 10px;
+    height: 150px;
 }
 .caravan-details{
     margin-left: 45px;
