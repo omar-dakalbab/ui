@@ -41,7 +41,7 @@ const Questions = () => {
         },
         {
             question: "Depozito vermek zorunlu mudur?",
-            answer: "Karavanın olası hasarı, trafik cezası ve köprü geçişleri nedeniyle depozito çok önemlidir. bu nedenle kervan sahipleri depozito isteyebilir; İlanları incelerken karavan özelliklerinde depozito tutarını görebilirsiniz.",
+            answer: "Karavanın olası hasarı, trafik cezası ve köprü geçişleri nedeniyle depozito çok önemlidir. bu nedenle karavan sahipleri depozito isteyebilir; İlanları incelerken karavan özelliklerinde depozito tutarını görebilirsiniz.",
             open: false
         },
         {
@@ -51,7 +51,7 @@ const Questions = () => {
         },
         {
             question: "Nasıl Kiralama Yapılır?",
-            answer: "Caravnn platformunda, bir karavan kiralamak için sadece üç adım vardır: Ya size uygun karavanları listeleyin ya da sitede öne çıkan karavanlardan birini seçin. caravınn.com'daki arama çubuğuna tatilinizin tarihlerini ve yerini girerek harika karavanlar bulabilir ve değerlendirebilirsiniz. Seçtiğiniz karavanın müsait olduğu günlere göre 'Rezervasyon yap' seçeneğini seçip karavan sahibinin onay vermesini bekleyebilirsiniz. İlgilendiğiniz karavan için sahibi 'Anında Rezervasyon' özelliğini açtıysa, izin almadan hemen karavan kiralayabilirsiniz. Ödemenizi tamamlayıp rezervasyonunuzun onaylanmasını beklerken, seyahat planınızı yapabilirsiniz. Lütfen şartlar ve koşullar, sınırlamalar ve iptal politikaları dahil olmak üzere kritik makalelerimizi şimdi okuyun.",
+            answer: "Caravınn platformunda, bir karavan kiralamak için sadece üç adım vardır: Ya size uygun karavanları listeleyin ya da sitede öne çıkan karavanlardan birini seçin. caravınn.com'daki arama çubuğuna tatilinizin tarihlerini ve yerini girerek harika karavanlar bulabilir ve değerlendirebilirsiniz. Seçtiğiniz karavanın müsait olduğu günlere göre 'Rezervasyon yap' seçeneğini seçip karavan sahibinin onay vermesini bekleyebilirsiniz. İlgilendiğiniz karavan için sahibi 'Anında Rezervasyon' özelliğini açtıysa, izin almadan hemen karavan kiralayabilirsiniz. Ödemenizi tamamlayıp rezervasyonunuzun onaylanmasını beklerken, seyahat planınızı yapabilirsiniz. Lütfen şartlar ve koşullar, sınırlamalar ve iptal politikaları dahil olmak üzere kritik makalelerimizi şimdi okuyun.",
             open: false
         },
         {
