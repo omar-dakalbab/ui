@@ -16,7 +16,7 @@ const Completed = () => {
                 <img src={success} alt="" />
                 <h1>TEBRİKLER!</h1>
                 <p>Tebrikler Maceraya Vınn'lamaya Hazırsınız...</p>
-                <NavLink style={{ color: '#FFF' }} to='/kiralik-karavanlar/all'>
+                <NavLink style={{ color: '#FFF' }} to='/kiralik-karavanlar'>
                     <button style={{width: '100%'}}>
 
                         Karavanlarıma Git

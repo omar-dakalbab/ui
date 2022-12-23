@@ -41,7 +41,7 @@ const Navbar = () => {
                     <li>
                         <NavLink style={({ isActive }) => ({
                             color: isActive ? '#0B91C5' : 'black'
-                        })} to="/kiralik-karavanlar/all">Kiralık Karavanlar</NavLink>
+                        })} to="/kiralik-karavanlar">Kiralık Karavanlar</NavLink>
                     </li>
                     <li>
                         <NavLink style={({ isActive }) => ({
@@ -85,7 +85,7 @@ const Navbar = () => {
                                 <li>
                                     <NavLink style={({ isActive }) => ({
                                         color: isActive ? '#FFF' : '#FFF'
-                                    })} to="/kiralik-karavanlar/all">Kiralık Karavanlar</NavLink>
+                                    })} to="/kiralik-karavanlar">Kiralık Karavanlar</NavLink>
                                 </li>
                                 <li>
                                     <NavLink style={({ isActive }) => ({

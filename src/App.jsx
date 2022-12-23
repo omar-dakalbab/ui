@@ -157,7 +157,7 @@ const App = () => {
           element: <HowToRent />
         },
         {
-          path: "/kiralik-karavanlar/:location",
+          path: "/kiralik-karavanlar",
           element: <Caravans />
         },
         {

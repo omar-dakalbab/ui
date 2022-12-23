@@ -26,7 +26,7 @@ const MainHeader = () => {
         <div className="te">
           <h1>Maceraya Vınn'lıyoruz..</h1>
           <div className="buttons">
-            <Link to={'/kiralik-karavanlar/all'}><button className="btn btn-white" style={{ padding: '7px 40px' }}>Karavan Kirala</button></Link>
+            <Link to={'/kiralik-karavanlar'}><button className="btn btn-white" style={{ padding: '7px 40px' }}>Karavan Kirala</button></Link>
             <Link to={'/kiraya-verin'}><button className="btn btn-transparent" style={{ padding: '7px 40px' }}>Karavan kiraya ver</button></Link>
           </div>
           <div className="searchBar">
@@ -48,7 +48,7 @@ const MainHeader = () => {
               <img src={dateIcon} alt=""/>
             </div>
             <div className="button vinn">
-              <Link to={`/kiralik-karavanlar/${inputs.location}`}><button className="btn btn-blue-big">Vınn'la</button></Link>
+              <Link to={`/kiralik-karavanlar`}><button className="btn btn-blue-big">Vınn'la</button></Link>
             </div>
           </div>
         </div>

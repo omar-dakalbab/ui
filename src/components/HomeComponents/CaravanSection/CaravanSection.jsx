@@ -23,7 +23,6 @@ const CaravanSection = () => {
             <div className="group">
                 <div className="frontground">
                     <img className='caravan' data-aos-duration="1200" data-aos="fade-right" src={Caravan} alt="caravan" />
-                    {/* <img className='playButton' src={PlayButton} alt="playButton" /> */}
                 </div>
                 <div className="text">
                     <div data-aos-duration="1500" data-aos="fade-left" className="text-group">

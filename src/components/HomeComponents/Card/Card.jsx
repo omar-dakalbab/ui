@@ -75,7 +75,9 @@ const Card = (props) => {
                         :
                         <div></div>
                     }
-                    <img src={process.env.PUBLIC_URL + `/img/${img[0]}`} style={{ borderRadius: 15, width: '95%' }} alt='' />
+                    <div style={{textAlign: 'center', width: '330px'}}>
+                    <img src={process.env.PUBLIC_URL + `/img/${img[0]}`} style={{ borderRadius: 15, width: 'auto', maxWidth: '330px', maxHeight: '220px' }} alt='' />
+                    </div>
                 </div>
                 <div>
                     <h3>{props.title}</h3>

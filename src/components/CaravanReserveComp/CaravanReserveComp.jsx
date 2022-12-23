@@ -1,92 +1,76 @@
 import React, { useState, useEffect } from 'react'
 import './style.css'
-// Calendar
-import { DateRange } from 'react-date-range';
-import 'react-date-range/dist/styles.css'; // main css file
-import 'react-date-range/dist/theme/default.css'; // theme css file
 import bg from './bg.png'
 import EditRoadOutlinedIcon from '@mui/icons-material/EditRoadOutlined';
 import LocalGasStationOutlinedIcon from '@mui/icons-material/LocalGasStationOutlined';
 import RvHookupOutlinedIcon from '@mui/icons-material/RvHookupOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import CurrencyLiraOutlinedIcon from '@mui/icons-material/CurrencyLiraOutlined';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Axios from 'axios'
 import moment from 'moment'
+// import DatePicker from "react-datepicker";
+// import "react-datepicker/dist/react-datepicker.css";
 
-const CaravanReserveComp = () => {
-  var curr = new Date();
+import { DateRange } from 'react-date-range';
 
+const CaravanReserveComp = ({ onChange }) => {
+  // ID OF CARAVAN
   const { id } = useParams()
-
   const [caravan, SetCaravan] = useState([]);
-  const [startDate, setStartDate] = useState();
-  const [endDate, setEndDate] = useState();
-  // const [err, SetErr] = useState();
-  const [inputs, setInputs] = useState({
-    description: "",
-    startDate: "",
-    endDate: "",
-  })
-  const handleChange = (e) => {
-    setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
+  const [minDate, setMinDate] = useState(null);
+  const [maxDate, setMaxDate] = useState(null);
   useEffect(() => {
-
-
-
-
     Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/${id}`).then((response) => {
       SetCaravan(response.data)
     })
-    setStartDate(moment(dateStart).format('L'))
-    setEndDate(moment(dateEnd).format('L'))
-
-    setInputs({
-      description: inputs.description,
-      startDate: startDate,
-      endDate: endDate,
+    caravan.map((val, key) => {
+      setMinDate(moment(val.startDate).format('MM-DD-YYYY'))
+      setMaxDate(moment(val.endDate).format('MM-DD-YYYY'))
     })
-
   })
+
   const [state, setState] = useState([
     {
-      startDate: curr,
-      endDate: curr,
-      key: 'selection'
+      startDate: new Date(minDate),
+      endDate: new Date(maxDate),
+      key: "selection"
     }
   ]);
-  const dateStart = state[0].startDate
 
-  const dateEnd = state[0].endDate
-
-
+  const handleOnChange = (ranges) => {
+    const { selection } = ranges;
+    // onChange(selection);
+    setState([selection]);
+  };
   return (
     <div className='karavan-reserve-comp'>
       <div className="karavan-reserve-left">
         <span id='title'>Karavanınızı</span>
         <h1>Kiralıyorsunuz</h1>
         <p>Hangi günler Kullanıcaksınız?</p>
-    
+        {minDate + " : " + maxDate}
         <div className='date-calendar'>
           <DateRange
-            editableDateInputs={true}
-            onChange={item => setState([item.selection])}
-            moveRangeOnFirstSelection={false}
+            onChange={handleOnChange}
+            months={2}
             ranges={state}
+            direction="horizontal"
+            minDate={new Date(minDate)}
+            maxDate={new Date(maxDate)}
           />
         </div>
         <p style={{ marginBottom: 15 }}>Açıklama Girin</p>
-        <textarea onChange={handleChange} id='aciklama' name="description" placeholder='Açıklama Girin'></textarea>
-        <button id="devam">
-          {dateEnd ?
+        <textarea id='aciklama' name="description" placeholder='Açıklama Girin'></textarea>
+        {/* <button id="devam">
+           {dateEnd ?
             <Link to={`/caravan-rezerve/ek-urunler/${id}`} state={{ from: inputs }} style={{ color: '#FFF' }}>
               Devam
             </Link>
             :
             <p>Enter your details first...  </p>
-          }
-        </button>
+          } 
+        </button> */}
       </div>
       {
         caravan === [] ? (

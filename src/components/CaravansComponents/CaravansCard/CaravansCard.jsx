@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom'
 
 
 const CaravansCard = (props) => {
+
     const [user_id, SetUserId] = useState('null')
     const auth = JSON.parse(localStorage.getItem('user'))
     let location = useParams();
@@ -26,10 +27,11 @@ const CaravansCard = (props) => {
             SetUserId(null)
         }
 
-    }, []);
+    });
 
     return (
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+
             {carad.length === 0 ? (
                 <div style={{ margin: '100px' }}>
                     <h1>Sonuç bulunmadı...</h1>
@@ -38,7 +40,7 @@ const CaravansCard = (props) => {
                 carad.slice(0, props.limit).map((val, key) => {
                     return (
                         <>
-                            <div className="caravan-cards" >
+                            <div className="caravan-cards" style={{marginBottom: 25}}>
                                 <Card userid={user_id} cardid={val.id} img={val.images} title={val.caravan_title} location={val.location} road={val.road} fuel={val.fuel_type} type={val.caravan_type} price={val.price} pr={val.pr} />
                             </div>
                         </>
