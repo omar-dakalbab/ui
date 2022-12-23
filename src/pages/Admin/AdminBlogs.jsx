@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Layout from './Layout'
 import './layout.css'
-import Axios from 'axios'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 import moment from 'moment'
 
@@ -32,7 +32,7 @@ const AdminBlogs = () => {
     formData.append('blog_header', inputs.blog_header)
     formData.append('blog_body', inputs.blog_body)
     try {
-      await Axios.post("https://caravinn-test.herokuapp.com/api/blog/add", formData)
+      await axios.post("http://104.247.164.103/api/blog/add", formData)
     }
     catch (err) {
       console.log(err)
@@ -43,7 +43,7 @@ const AdminBlogs = () => {
   const [blog_list, SetBlog_list] = useState([]);
 
   const getBlog = () => {
-    Axios.get("https://caravinn-test.herokuapp.com/api/blog/post").then((response) => {
+    axios.get("http://104.247.164.103/api/blog/post").then((response) => {
       SetBlog_list(response.data)
     }, [])
   }
@@ -52,7 +52,7 @@ const AdminBlogs = () => {
     getBlog()
   }, [])
   const deleteItem = (id) => {
-    Axios.delete(`https://caravinn-test.herokuapp.com/api/blog/post-remove/${id}`).then((response) => {
+    axios.delete(`http://104.247.164.103/api/blog/post-remove/${id}`).then((response) => {
       console.log(response)
       getBlog()
     })
@@ -123,8 +123,8 @@ const AdminBlogs = () => {
                 return search === '' ? val : val.id.toString()
                   .includes(search)
               }
-              else{
-                 return search === '' ? val : val
+              else {
+                return search === '' ? val : val
               }
             }).map((val, key) => {
               return (
@@ -141,7 +141,7 @@ const AdminBlogs = () => {
                 </tr>
               )
             })}
-           
+
           </table>
         </div>
       </div>

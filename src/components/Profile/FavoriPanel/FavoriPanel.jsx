@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import LeftMenu from '../LeftMenu/LeftMenu'
 import FavCard from './FavCard'
-import Axios from 'axios'
+import axios from 'axios'
 import caravan from './cara1.png'
 const FavoriPanel = (props) => {
     
@@ -10,7 +10,7 @@ const FavoriPanel = (props) => {
     const [carad, SetCardList] = useState([]);
 
     const getLike = () => {
-        Axios.get(`https://caravinn-test.herokuapp.com/api/like/${auth.id}`).then((response) => {
+        axios.get(`http://104.247.164.103/api/like/${auth.id}`).then((response) => {
             SetCardList(response.data)
         })
     }

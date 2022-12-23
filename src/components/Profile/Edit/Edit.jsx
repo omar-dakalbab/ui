@@ -3,7 +3,7 @@ import LeftMenu from '../LeftMenu/LeftMenu'
 import './style.css'
 import profile from './profile-pic.png'
 import { NavLink } from 'react-router-dom'
-import Axios from 'axios';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/authContext'
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined"
@@ -18,7 +18,7 @@ const Edit = () => {
 
   // const [user, setUser] = useState({});
   const getUser = () => {
-    Axios.get(`https://caravinn-test.herokuapp.com/api/user/${currentUser.id}`).then((resp) => {
+    axios.get(`http://104.247.164.103/api/user/${currentUser.id}`).then((resp) => {
       setState({ ...resp.data[0] })
     })
   }
@@ -40,9 +40,9 @@ const Edit = () => {
     setState({ ...state, [name]: value });
   }
   const handleSubmit = () => {
-    console.log(currentUser.id)
-    Axios
-      .put(`https://caravinn-test.herokuapp.com/api/user/edit-user/${currentUser.id}`, {
+ 
+    axios
+      .put(`http://104.247.164.103/api/user/edit-user/${currentUser.id}`, {
         name,
         email,
         phone_number,

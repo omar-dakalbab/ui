@@ -6,8 +6,8 @@ import LocalGasStationOutlinedIcon from '@mui/icons-material/LocalGasStationOutl
 import RvHookupOutlinedIcon from '@mui/icons-material/RvHookupOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import CurrencyLiraOutlinedIcon from '@mui/icons-material/CurrencyLiraOutlined';
-import { useParams } from 'react-router-dom';
-import Axios from 'axios'
+import { Link, useParams } from 'react-router-dom';
+import axios from 'axios'
 import moment from 'moment'
 // import DatePicker from "react-datepicker";
 // import "react-datepicker/dist/react-datepicker.css";
@@ -20,8 +20,10 @@ const CaravanReserveComp = ({ onChange }) => {
   const [caravan, SetCaravan] = useState([]);
   const [minDate, setMinDate] = useState(null);
   const [maxDate, setMaxDate] = useState(null);
+
+  
   useEffect(() => {
-    Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/${id}`).then((response) => {
+    axios.get(`http://104.247.164.103/api/caravan/${id}`).then((response) => {
       SetCaravan(response.data)
     })
     caravan.map((val, key) => {
@@ -29,18 +31,21 @@ const CaravanReserveComp = ({ onChange }) => {
       setMaxDate(moment(val.endDate).format('MM-DD-YYYY'))
     })
   })
-
+ 
   const [state, setState] = useState([
     {
-      startDate: new Date(minDate),
-      endDate: new Date(maxDate),
+      startDate: null,
+      endDate: null,
       key: "selection"
     }
   ]);
-
+  const [inputs, setInputs] = useState([
+    {
+      description: "",
+    }
+  ])
   const handleOnChange = (ranges) => {
     const { selection } = ranges;
-    // onChange(selection);
     setState([selection]);
   };
   return (
@@ -49,7 +54,10 @@ const CaravanReserveComp = ({ onChange }) => {
         <span id='title'>Karavanınızı</span>
         <h1>Kiralıyorsunuz</h1>
         <p>Hangi günler Kullanıcaksınız?</p>
-        {minDate + " : " + maxDate}
+
+        {/* DEVELOPMENT TEST */}
+        {/* {minDate + " : " + maxDate} */}
+
         <div className='date-calendar'>
           <DateRange
             onChange={handleOnChange}
@@ -62,15 +70,15 @@ const CaravanReserveComp = ({ onChange }) => {
         </div>
         <p style={{ marginBottom: 15 }}>Açıklama Girin</p>
         <textarea id='aciklama' name="description" placeholder='Açıklama Girin'></textarea>
-        {/* <button id="devam">
-           {dateEnd ?
+        <button id="devam">
+          {state.endDate ?
             <Link to={`/caravan-rezerve/ek-urunler/${id}`} state={{ from: inputs }} style={{ color: '#FFF' }}>
               Devam
             </Link>
             :
             <p>Enter your details first...  </p>
-          } 
-        </button> */}
+          }
+        </button>
       </div>
       {
         caravan === [] ? (

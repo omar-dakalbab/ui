@@ -3,14 +3,15 @@ import './commentscomp.css'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { AiOutlineMinus } from 'react-icons/ai'
 import profile from './profile.png'
-import Axios from 'axios'
+import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import moment from 'moment'
 const CommentsComp = () => {
     let { blogId } = useParams();
     const [comment, setComment] = useState([]);
+
     const getComments = () => {
-        Axios.get(`https://caravinn-test.herokuapp.com/api/comment/get-comments/${blogId}`).then((resp) => {
+        axios.get(`http://104.247.164.103/api/comment/get-comments/${blogId}`).then((resp) => {
             setComment(resp.data)
         })
     }

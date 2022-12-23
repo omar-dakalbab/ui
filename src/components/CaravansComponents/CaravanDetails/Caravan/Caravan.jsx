@@ -7,7 +7,7 @@ import RvHookupOutlinedIcon from '@mui/icons-material/RvHookupOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import CurrencyLiraOutlinedIcon from '@mui/icons-material/CurrencyLiraOutlined';
 import { Link, useParams } from 'react-router-dom'
-import Axios from 'axios'
+import axios from 'axios'
 import { useState } from 'react'
 import { ImageViewer } from "react-image-viewer-dv"
 
@@ -20,6 +20,7 @@ const Caravan = () => {
     const [img, setImage] = useState({});
     const [user_id, SetUserId] = useState('null')
     const auth = JSON.parse(localStorage.getItem('user'))
+
     useEffect(() => {
         if (auth) {
             SetUserId(auth.id)
@@ -40,10 +41,11 @@ const Caravan = () => {
                 'Content-Type': 'application/json',
             },
         };
-        Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/${id}`).then((response) => {
+        
+        axios.get(`http://104.247.164.103/api/caravan/${id}`).then((response) => {
             SetCaravan(response.data)
         })
-        Axios.get(`https://caravinn-test.herokuapp.com/api/like/${id}/${user_id}`, config).then((response) => {
+        axios.get(`http://104.247.164.103/api/like/${id}/${user_id}`, config).then((response) => {
             setLikeData(response.data)
             if (likeData.length > 0) {
                 SetLiked(true)
@@ -54,9 +56,10 @@ const Caravan = () => {
     })
 
 
+    
     const insertLike = async () => {
         try {
-            await Axios.post(`https://caravinn-test.herokuapp.com/api/like/likeInsert/${id}/${user_id}`).then((response) => {
+            await axios.post(`http://104.247.164.103/api/like/likeInsert/${id}/${user_id}`).then((response) => {
                 console.log(response)
             })
         }

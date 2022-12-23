@@ -6,14 +6,16 @@ import { useParams } from 'react-router-dom';
 import Axios from 'axios'
 
 const BlogDetails = () => {
-
+  const axiosIntance = Axios.create({
+    baseURL: process.env.REACT_APP_URL,
+});
   let { blogId } = useParams();
   const [post, setPost] = useState({});
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    Axios.get(
-      `https://caravinn-test.herokuapp.com/api/blog/post/${blogId}`
+    axiosIntance.get(
+      `/blog/post/${blogId}`
     ).then((data) => {
       setPost({
         blog_image: data.data[0].blog_image,
@@ -31,7 +33,7 @@ const BlogDetails = () => {
         <BlogDetailsHeader blog_image={post.blog_image} blog_title={post.blog_title} blog_time={post.date_created} />
       </div>
       <div className="wrapper-white">
-        <BlogDetailsWrapper header={post.blog_header} body={post.blog_body} blogID={blogId}/>
+        <BlogDetailsWrapper header={post.blog_header} body={post.blog_body} blogID={blogId} />
       </div>
     </div>
   )

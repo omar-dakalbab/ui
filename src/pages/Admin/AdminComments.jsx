@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react'
-import Axios from 'axios'
+import axios from 'axios'
 import moment from 'moment'
 import Layout from './Layout';
 const AdminComments = () => {
     const [caravan_list, SetCaravan_list] = useState([]);
 
     const getCaravan = () => {
-        Axios.get("https://caravinn-test.herokuapp.com/api/comment/").then((response) => {
+        axios.get("http://104.247.164.103/api/comment/").then((response) => {
             SetCaravan_list(response.data)
         }, [])
     }
@@ -16,7 +16,7 @@ const AdminComments = () => {
     }, [])
 
     const deleteItem = (id) => {
-        Axios.delete(`https://caravinn-test.herokuapp.com/api/comment/${id}`).then((response) => {
+        axios.delete(`http://104.247.164.103/api/comment/${id}`).then((response) => {
             console.log(response)
             getCaravan()
         })

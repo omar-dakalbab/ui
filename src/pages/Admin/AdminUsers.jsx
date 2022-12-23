@@ -7,16 +7,18 @@ const AdminUsers = () => {
   const [user_list, SetUser_list] = useState([]);
 
   const getUsers = () => {
-    Axios.get("https://caravinn-test.herokuapp.com/api/user/").then((response) => {
+    Axios.get("http://104.247.164.103/api/user/").then((response) => {
       SetUser_list(response.data)
     }, [])
   }
-
+  const axiosIntance = Axios.create({
+    baseURL: process.env.REACT_APP_URL,
+});
   useEffect(() => {
     getUsers()
   }, [])
   const deleteItem = (id) => {
-    Axios.delete(`https://caravinn-test.herokuapp.com/api/user/remove-user/${id}`).then((response) => {
+    axiosIntance.delete(`/user/remove-user/${id}`).then((response) => {
       console.log(response)
       getUsers()
     })

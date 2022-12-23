@@ -46,7 +46,7 @@ import AdminRentedCaravan from './pages/Admin/AdminRentedCaravan'
 import RentedHistory from './pages/Profile/RentedHistory'
 import NavbarWhite from './components/NavBar/NavbarWhite'
 import PageNotFound from './pages/PageNotFound/PageNotFound'
-import AdminLogin from './pages/Admin/AdminLogin'
+import Ad from './pages/Ad/Ad'
 
 
 const App = () => {
@@ -260,9 +260,9 @@ const App = () => {
       element: <PageNotFound />
     },
     {
-      path: "/admin-caravinn",
-      element: <AdminLogin />
-    }
+      path: "/ad-caravinn",
+      element: <Ad />
+    },
   ])
 
   return (

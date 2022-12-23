@@ -1,13 +1,13 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import Axios from 'axios'
+import axios from 'axios'
 import moment from 'moment'
 import Layout from './Layout'
 const AdminRentedCaravan = () => {
     const [user_list, SetUser_list] = useState([]);
 
     const getUsers = () => {
-        Axios.get("https://caravinn-test.herokuapp.com/api/caravan/cr").then((response) => {
+        axios.get("http://104.247.164.103/api/caravan/cr").then((response) => {
             SetUser_list(response.data)
         }, [])
     }

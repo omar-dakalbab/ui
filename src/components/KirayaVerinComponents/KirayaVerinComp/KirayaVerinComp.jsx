@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './style.css'
 import bg from './bg.png'
-import Axios from 'axios'
+import axios from 'axios'
 import { useContext } from 'react'
 import { AuthContext } from '../../../context/authContext'
 const KirayaVerinComp = () => {
@@ -9,6 +9,7 @@ const KirayaVerinComp = () => {
     const handleInterviewDateClick = () => {
         interviewDateRef.current.focus();
     };
+
     const [inputs, setInputs] = useState({
         startDate: "",
         endDate: "",
@@ -44,7 +45,7 @@ const KirayaVerinComp = () => {
             }
         }
         try {
-            await Axios.post(`https://caravinn-test.herokuapp.com/api/rent/send-requset/${currentUser.id}`, formData, config).then((response) => {
+            await axios.post(`http://104.247.164.103/api/rent/send-requset/${currentUser.id}`, formData, config).then((response) => {
                 console.log(response)
             })
         }

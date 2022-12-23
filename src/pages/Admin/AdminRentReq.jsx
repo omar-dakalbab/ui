@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Layout from './Layout'
 import './layout.css'
-import Axios from 'axios'
+import axios from 'axios'
 
 
 const AdminRentReq = () => {
@@ -10,7 +10,7 @@ const AdminRentReq = () => {
     const [img, setImage] = useState({});
 
     const getUsers = () => {
-        Axios.get("https://caravinn-test.herokuapp.com/api/rent/get-caravan-req").then((response) => {
+        axios.get("http://104.247.164.103/api/rent/get-caravan-req").then((response) => {
             SetUser_list(response.data)
         }, [])
     }
@@ -27,14 +27,14 @@ const AdminRentReq = () => {
         getUsers()
     })
     const deleteItem = (id) => {
-        Axios.delete(`https://caravinn-test.herokuapp.com/api/rent/delete/${id}`).then((response) => {
+        axios.delete(`http://104.247.164.103/api/rent/delete/${id}`).then((response) => {
             console.log(response)
             getUsers()
         })
     }
 
     const approveReq = (id) => {
-        Axios.get(`https://caravinn-test.herokuapp.com/api/rent/approve-request/${id}`).then((response) => {
+        axios.get(`http://104.247.164.103/api/rent/approve-request/${id}`).then((response) => {
             console.log(response.data)
             deleteItem(id)
         })

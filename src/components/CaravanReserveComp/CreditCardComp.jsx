@@ -3,13 +3,14 @@ import './credit-card.css'
 import { MdArrowBackIosNew } from 'react-icons/md'
 import { NavLink, useLocation, useParams } from 'react-router-dom'
 import level2 from './level2.svg'
-import Axios from 'axios'
+import axios from 'axios'
 import { AuthContext } from '../../context/authContext'
 const CreditCard = () => {
     const { id } = useParams();
     const { currentUser } = useContext(AuthContext)
+
     const updateRented = () => {
-        Axios.put(`https://caravinn-test.herokuapp.com/api/caravan/rented/${id}/${currentUser.id}`, inputs).then((response) => {
+        axios.put(`http://104.247.164.103/api/caravan/rented/${id}/${currentUser.id}`, inputs).then((response) => {
             console.log(response.data)
         })
     }

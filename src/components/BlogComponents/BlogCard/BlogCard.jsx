@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom'
 const BlogCard = (props) => {
 
     const [blogList, SetblogList] = useState([]);
-   
+
     useEffect(() => {
-        Axios.get("https://caravinn-test.herokuapp.com/api/blog/post").then((response) => {
+        Axios.get("http://104.247.164.103/api/blog/post").then((response) => {
             SetblogList(response.data)
         });
     }, []);

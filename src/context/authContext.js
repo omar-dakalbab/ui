@@ -9,14 +9,16 @@ export const AuthContextProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(
         JSON.parse(localStorage.getItem("user"))
     );
-
+    const axiosIntance = axios.create({
+        baseURL: process.env.REACT_APP_URL,
+    });
     const login = async (inputs) => {
-        const res = await axios.post("https://caravinn-test.herokuapp.com/api/auth/login", inputs, {
+        const res = await axiosIntance.post("/auth/login", inputs, {
             withCredentials: true,
         });
 
         setCurrentUser(res.data)
-        
+
     };
 
     useEffect(() => {

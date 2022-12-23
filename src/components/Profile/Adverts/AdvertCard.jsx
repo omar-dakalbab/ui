@@ -29,14 +29,14 @@ const AdvertCard = (props) => {
     const [promoted, SetPromoted] = useState(false)
 
     const promoteCard = () => {
-        axios.put(`https://caravinn-test.herokuapp.com/api/caravan/promote-caravan/${props.cardid}`).then((response) => {
+        axios.put(`http://104.247.164.103/api/caravan/promote-caravan/${props.cardid}`).then((response) => {
             window.location.reload();
         })
     }
 
     useEffect(() => {
         const pr = props.pr;
-        if (pr == 1) {
+        if (pr === 1) {
             SetPromoted(true)
         } else {
             SetPromoted(false)

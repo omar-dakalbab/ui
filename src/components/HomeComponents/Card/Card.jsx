@@ -7,7 +7,7 @@ import cara from '../../../assets/cara.svg'
 
 import './card.css'
 import { NavLink } from 'react-router-dom';
-import Axios from 'axios';
+import axios from 'axios';
 import promotion from './promotion.png'
 
 const Card = (props) => {
@@ -17,6 +17,8 @@ const Card = (props) => {
     const [liked, SetLiked] = useState(false)
     const [likeData, setLikeData] = useState({});
     const [promoted, SetPromoted] = useState(false)
+
+   
     const [img, setImage] = useState({});
     useEffect(() => {
         if (props.img) {
@@ -30,7 +32,7 @@ const Card = (props) => {
                 'Content-Type': 'application/json',
             },
         };
-        Axios.get(`https://caravinn-test.herokuapp.com/api/like/${id}/${userid}`, config).then((response) => {
+        axios.get(`http://104.247.164.103/api/like/${id}/${userid}`, config).then((response) => {
             setLikeData(response.data)
             if (likeData.length > 0) {
                 SetLiked(true)
@@ -39,7 +41,7 @@ const Card = (props) => {
             }
         })
         const pr = props.pr;
-        if (pr == 1) {
+        if (pr === 1) {
             SetPromoted(true)
         } else {
             SetPromoted(false)
@@ -48,7 +50,7 @@ const Card = (props) => {
 
     const insertLike = async () => {
         try {
-            await Axios.post(`https://caravinn-test.herokuapp.com/api/like/likeInsert/${id}/${userid}`).then((response) => {
+            await axios.post(`http://104.247.164.103/api/like/likeInsert/${id}/${userid}`).then((response) => {
                 console.log(response)
             })
         }

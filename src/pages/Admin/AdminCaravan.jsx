@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Layout from './Layout'
 import './layout.css'
-import Axios from 'axios'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
@@ -30,7 +30,7 @@ const AdminCaravan = () => {
   //     setErr("Hata Oluştu, Lütfen boşlukları doldurunuz!");
   //   } else {
   //     try {
-  //       await Axios.post("https://caravinn-test.herokuapp.com/api/caravan/add", inputs)
+  //       await Axios.post("http://104.247.164.103/api/caravan/add", inputs)
   //     }
   //     catch (err) {
   //       console.log(err)
@@ -43,7 +43,7 @@ const AdminCaravan = () => {
   const [caravan_list, SetCaravan_list] = useState([]);
 
   const getCaravan = () => {
-    Axios.get("https://caravinn-test.herokuapp.com/api/caravan/").then((response) => {
+    axios.get("http://104.247.164.103/api/caravan/").then((response) => {
       SetCaravan_list(response.data)
     }, [])
   }
@@ -80,7 +80,7 @@ const AdminCaravan = () => {
 
 
   const deleteItem = (id) => {
-    Axios.delete(`https://caravinn-test.herokuapp.com/api/caravan/delete/${id}`).then((response) => {
+    axios.delete(`http://104.247.164.103/api/caravan/delete/${id}`).then((response) => {
       getCaravan()
     })
     getCaravan()
@@ -126,7 +126,7 @@ const AdminCaravan = () => {
         }
       }
 
-      await Axios.post("https://caravinn-test.herokuapp.com/api/caravan/upload-pp", formData, config).then((res)=> {
+      await axios.post("http://104.247.164.103/api/caravan/upload-pp", formData, config).then((res)=> {
         console.log(res)
       });
       getCaravan()

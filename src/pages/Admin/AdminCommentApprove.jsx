@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Layout from './Layout'
 import './layout.css'
-import Axios from 'axios'
+import axios from 'axios'
 import moment from 'moment'
 
 const AdminCommentApprove = () => {
@@ -22,7 +22,7 @@ const AdminCommentApprove = () => {
     //     e.preventDefault()
 
     //     try {
-    //         await Axios.post("https://caravinn-test.herokuapp.com/api/caravan/add", inputs)
+    //         await Axios.post("http://104.247.164.103/api/caravan/add", inputs)
     //     }
     //     catch (err) {
     //         console.log(err)
@@ -33,7 +33,7 @@ const AdminCommentApprove = () => {
     const [caravan_list, SetCaravan_list] = useState([]);
 
     const getCaravan = () => {
-        Axios.get("https://caravinn-test.herokuapp.com/api/comment/get-comments").then((response) => {
+        axios.get("http://104.247.164.103/api/comment/get-comments").then((response) => {
             SetCaravan_list(response.data)
         }, [])
     }
@@ -43,14 +43,14 @@ const AdminCommentApprove = () => {
     }, [])
 
     const deleteItem = (id) => {
-        Axios.delete(`https://caravinn-test.herokuapp.com/api/comment/delete-comment/${id}`).then((response) => {
+        axios.delete(`http://104.247.164.103/comment/delete-comment/${id}`).then((response) => {
             console.log(response)
             getCaravan()
         })
     }
 
     const approveItem = (id) => {
-        Axios.post(`https://caravinn-test.herokuapp.com/api/comment/approve-comment/${id}`).then((response) => {
+        axios.post(`http://104.247.164.103/api/comment/approve-comment/${id}`).then((response) => {
             console.log(response)
             deleteItem(id)
             getCaravan()

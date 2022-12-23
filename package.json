@@ -1,7 +1,7 @@
 {
   "name": "ui",
   "version": "0.1.0",
-  "private": true,
+  "homepage": ".",
   "dependencies": {
     "@bcad1591/react-date-picker": "^0.1.1",
     "@coreui/coreui": "^4.2.2",
@@ -71,6 +71,5 @@
   },
   "devDependencies": {
     "react-router-dom": "^6.4.2"
-  },
-  "proxy": "https://caravinn-test.herokuapp.com/"
+  }
 }

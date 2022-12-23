@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import Axios from 'axios'
+import axios from 'axios'
 import { AuthContext } from '../../../context/authContext'
 import LeftMenu from '../LeftMenu/LeftMenu'
 import RentedCard from './RentedCard'
@@ -8,9 +8,10 @@ import { Link } from 'react-router-dom'
 const RentedHistory = (props) => {
     const { currentUser } = useContext(AuthContext)
     const [carad, SetCardList] = useState([]);
+
     const getRentedCaravan = () => {
 
-        Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/rented-history-id/${currentUser.id}`).then((response) => {
+        axios.get(`http://104.247.164.103/api/caravan/rented-history-id/${currentUser.id}`).then((response) => {
             SetCardList(response.data)
         })
 

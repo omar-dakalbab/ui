@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Axios from 'axios'
+import axios from 'axios'
 import './style.css'
 import bg from './bg.png'
 import { BsCalendar2Date } from 'react-icons/bs'
@@ -10,8 +10,9 @@ import { GiFuelTank } from 'react-icons/gi'
 
 const RentedCard = (props) => {
     const [carad, SetCardList] = useState([]);
+
     const getCaravan = () => {
-        Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/${props.cardid}`).then((response) => {
+        axios.get(`http://104.247.164.103/api/caravan/${props.cardid}`).then((response) => {
             SetCardList(response.data);
         })
     }

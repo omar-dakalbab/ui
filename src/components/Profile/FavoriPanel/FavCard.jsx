@@ -3,7 +3,7 @@ import './style.css'
 import road from '../../../assets/road.svg'
 import benzin from '../../../assets/benzin.svg'
 import cara from '../../../assets/cara.svg'
-import Axios from 'axios'
+import axios from 'axios'
 import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import { useContext } from 'react'
@@ -18,9 +18,10 @@ const FavCard = (props) => {
     useEffect(() => {
         checkLikes()
     })
+
     const checkLikes = () => {
 
-        Axios.get(`https://caravinn-test.herokuapp.com/api/like/${id}/${currentUser.id}`).then((response) => {
+        axios.get(`http://104.247.164.103/api/like/${id}/${currentUser.id}`).then((response) => {
             setLikeData(response.data)
             if (likeData.length > 0) {
                 SetLiked(true)
@@ -32,7 +33,7 @@ const FavCard = (props) => {
 
     const insertLike = async () => {
         try {
-            await Axios.post(`https://caravinn-test.herokuapp.com/api/like/likeInsert/${id}/${currentUser.id}`).then((response) => {
+            await axios.post(`http://104.247.164.103/api/like/likeInsert/${id}/${currentUser.id}`).then((response) => {
                 console.log(response)
 
             })

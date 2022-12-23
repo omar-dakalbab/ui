@@ -10,7 +10,7 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import { AiOutlineDelete } from 'react-icons/ai'
 import { useEffect } from 'react';
 
-import Axios from 'axios'
+import axios from 'axios'
 
 const AdvertEdit = () => {
   const initialState = {
@@ -28,7 +28,7 @@ const AdvertEdit = () => {
   const { id } = useParams()
   const getCaravan = () => {
 
-    Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/${id}`).then((resp) => {
+    axios.get(`http://104.247.164.103/api/caravan/${id}`).then((resp) => {
       setState({ ...resp.data[0] })
     })
   }
@@ -49,12 +49,12 @@ const AdvertEdit = () => {
 
   }, [])
   const caravanDelete = () => {
-    Axios.delete(`https://caravinn-test.herokuapp.com/api/caravan/delete/${id}`)
+    axios.delete(`http://104.247.164.103/api/caravan/delete/${id}`)
     nav('/profile/adverts')
   }
   const handleSubmit = () => {
-    Axios
-      .put(`https://caravinn-test.herokuapp.com/api/caravan/update-by-user/${id}`, {
+    axios
+      .put(`http://104.247.164.103/api/caravan/update-by-user/${id}`, {
         caravan_title,
         caravan_type,
         road,

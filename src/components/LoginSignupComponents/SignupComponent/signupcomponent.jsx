@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import Axios from 'axios'
+import axios from 'axios'
 import './signupcomponent.css'
 
 const SignupComponent = () => {
@@ -49,7 +49,6 @@ const SignupComponent = () => {
   }
 
 
-
   const [errMessage, setErr] = useState(null)
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -65,7 +64,7 @@ const SignupComponent = () => {
     }
     else {
       try {
-        Axios.post("https://caravinn-test.herokuapp.com/api/auth/register", inputs).then((response) => {
+        axios.post("http://104.247.164.103/api/auth/register", inputs).then((response) => {
           errors.push(response.data)
           setErr("Kayıdınız Yapıldı, Giriş yapabilirsiniz")
         }).catch(function (err) {

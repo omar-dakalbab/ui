@@ -10,7 +10,7 @@ import LeftMenu from '../LeftMenu/LeftMenu'
 import { NavLink } from 'react-router-dom'
 import moment from "moment";
 import { AuthContext } from '../../../context/authContext'
-import Axios from 'axios'
+import axios from 'axios'
 import Box from '@mui/material/Box';
 import KeyIcon from '@mui/icons-material/Key';
 import Typography from '@mui/material/Typography';
@@ -34,7 +34,7 @@ const Panel = () => {
 
     const { currentUser } = useContext(AuthContext)
     const getUser = () => {
-        Axios.get(`https://caravinn-test.herokuapp.com/api/user/${currentUser.id}`).then((resp) => {
+        axios.get(`http://104.247.164.103/api/user/${currentUser.id}`).then((resp) => {
             setState({ ...resp.data[0] })
         })
     }
@@ -66,7 +66,7 @@ const Panel = () => {
     const updatePassword = () => {
         if (inputs.password === inputs.passwordConfirm) {
             try {
-                Axios.put(`https://caravinn-test.herokuapp.com/api/user/update-password/${currentUser.id}`, inputs).then((resp) => {
+                axios.put(`http://104.247.164.103/api/user/update-password/${currentUser.id}`, inputs).then((resp) => {
                     setPswError('Şifre Değiştirildi!')
                 })
             }
@@ -112,7 +112,7 @@ const Panel = () => {
                     </Box>
                 </Modal>
                 <div className='grey-div'></div>
-               
+
                 <NavLink to={`/profile/edit`} ><button className="edit">Düzenle</button></NavLink>
                 <img src={profilePic} alt="" />
 

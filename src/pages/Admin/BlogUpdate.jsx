@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
 import './update.css'
-import Axios from 'axios'
+import axios from 'axios'
 import { useEffect } from 'react';
 import Layout from './Layout';
 
 const BlogUpdate = () => {
     const { id } = useParams()
     const getCaravan = () => {
-        Axios.get(`https://caravinn-test.herokuapp.com/api/blog/post/${id}`).then((resp) => {
+        axios.get(`http://104.247.164.103/api/blog/post/${id}`).then((resp) => {
             setState({ ...resp.data[0] })
         })
     }
+
     useEffect(() => {
         getCaravan()
     }, [id])
@@ -30,8 +31,8 @@ const BlogUpdate = () => {
         setState({ ...state, [name]: value });
     }
     const handleSubmit = () => {
-        Axios
-            .put(`https://caravinn-test.herokuapp.com/api/blog/update/${id}`, {
+        axios
+            .put(`http://104.247.164.103/api/blog/update/${id}`, {
                 blog_title,
                 blog_header,
                 blog_body,

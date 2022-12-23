@@ -5,15 +5,14 @@ import './style.css'
 import AdvertCard from './AdvertCard'
 import { AuthContext } from '../../../context/authContext'
 import { useContext } from 'react'
-import Axios from 'axios'
+import axios from 'axios'
 import caravan from './cara1.png'
 const AdvertsPanel = (props) => {
 
   const { currentUser } = useContext(AuthContext)
-
   const [carad, SetCardList] = useState([]);
   useEffect(() => {
-    Axios.get(`https://caravinn-test.herokuapp.com/api/caravan/user-id/${currentUser.id}`).then((response) => {
+    axios.get(`http://104.247.164.103/api/caravan/user-id/${currentUser.id}`).then((response) => {
       SetCardList(response.data)
     });
   }, []);
